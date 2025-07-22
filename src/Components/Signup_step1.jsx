@@ -66,7 +66,7 @@ const Signup_step1 = () => {
               </button>
             </div>
             <div className=' justify-center items-center flex flex-col gap-[24px]'>
-              <p className='text-base sm:text-xl text-[#181A20] font-normal [font-family:var(--font-league)]'>
+              <p className='text-base sm:text-xl text-[#181A20] font-normal [font-family:var(--font-league)] flex flex-col sm:flex-row gap-1 items-center '>
                 Already have an account?{' '}
                 <a href='/' className='text-[#5183F4] font-semibold'>
                   Log In
