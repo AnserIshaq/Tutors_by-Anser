@@ -52,3 +52,6 @@
 :where(.css-dev-only-do-not-override-7t2xvq).ant-input-outlined:focus-within {
   @apply shadow-none;
 }
+.ant-select-focused:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector{
+  @apply shadow-none;
+}

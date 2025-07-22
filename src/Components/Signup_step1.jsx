@@ -6,27 +6,23 @@ import { useNavigate } from 'react-router'
 const Signup_step1 = () => {
   const [detailSection, setDetailSection] = useState(false)
   const [nextBtn, setNextBtn] = useState(true)
-  const [selectBtn, setSelectBtn] = useState(false)
   const { type, icon, toggleVisibility } = usePasswordToggle()
   const navigate = useNavigate()
   const handleNext = () => {
     setDetailSection(true)
     setNextBtn(false)
-    setSelectBtn(true)
   }
   const handleChange = (value) => {
     console.log(`selected ${value}`)
   }
 
-  const handleSignup = ()=>{
+  const handleSignup = () => {
     navigate('/verify-email')
   }
   return (
     <div>
       <div className='common-auth-container'>
-        <div className='[font-family:var(--font-jakarta)] font-extrabold text-3xl sm:text-4xl self-center'>
-          Sign Up
-        </div>
+        <div className='[font-family:var(--font-jakarta)] font-extrabold text-3xl sm:text-4xl self-center'>Sign Up</div>
         <div className=' [font-family:var(--font-league)] text-base sm:text-2xl font-semibold text-[#181A20]'>
           Sign up as a
         </div>
@@ -45,9 +41,7 @@ const Signup_step1 = () => {
             <img src='/select-arrow.svg' alt='eye' className='absolute top-[18px] right-[10px] z-[10]' />
           </div>
           {nextBtn && (
-            <button
-              onClick={handleNext}
-              className='common-btn'>
+            <button onClick={handleNext} className='common-btn'>
               Next
             </button>
           )}
@@ -59,19 +53,11 @@ const Signup_step1 = () => {
             </div>
             <div className='flex flex-col gap-[24px]'>
               <div className='email-input relative'>
-                <input
-                  type='text'
-                  placeholder='Email'
-                  className='common-inputs'
-                />
+                <input type='text' placeholder='Email' className='common-inputs' />
                 <img src='/mail.svg' alt='email' className='absolute top-[15px] left-[10px]' />
               </div>
               <div className='pass-input relative'>
-                <input
-                  type={type}
-                  placeholder='Password'
-                  className='common-inputs '
-                />
+                <input type={type} placeholder='Password' className='common-inputs ' />
                 <img src='/key1.svg' alt='password' className='absolute top-[15px] left-[10px]' />
                 <img onClick={toggleVisibility} src={icon} alt='eye' className='absolute top-[15px] right-[10px]' />
               </div>
