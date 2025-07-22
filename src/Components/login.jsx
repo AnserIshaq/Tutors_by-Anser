@@ -1,20 +1,51 @@
 import React from 'react'
-import AuthBar from './AuthBar'
+import usePasswordToggle from '../Hooks/usePasswordToggle'
 
 const Login = () => {
+  const { type, icon, toggleVisibility } = usePasswordToggle()
   return (
-    <div className='login'>
-      <div className='login--inner flex flex-col border border-black'>
-        <div className='login-heading'>Welcome Back</div>
-        <div className='login-desc'>Log In to explore the world of tutors</div>
-        <div className='login-inputs'>
-          <input type='text' placeholder='Email' name='' id='' className='w-full border border-black' />
-          <input type='text' placeholder='Password' name='' id='' className='w-full border border-black' />
-          <button className='w-full border border-black'>Log In</button>
+    <div>
+      <div className='common-auth-container'>
+        <div className='[font-family:var(--font-jakarta)] font-extrabold text-3xl sm:text-4xl self-center'>
+          Welcome Back
         </div>
-        <div className='login-footer justifu-center items-center flex flex-col'>
-          <p>I forgot my password</p>
-          <p>Don't you have an account? SignuP</p>
+        <div className='[font-family:var(--font-league)] text-base sm:text-xl font-normal text-[#717171] self-center'>
+          Log In to explore the world of tutors
+        </div>
+        <div className='flex flex-col gap-[24px]'>
+          <div className='email-input relative'>
+            <input
+              type='text'
+              placeholder='Email'
+              className='common-inputs'
+            />
+            <img src='/mail.svg' alt='email' className='absolute top-[15px] left-[10px]' />
+          </div>
+          <div className='pass-input relative'>
+            <input
+              type={type}
+              placeholder='Password'
+              className='common-inputs '
+            />
+            <img src='/key1.svg' alt='password' className='absolute top-[15px] left-[10px]' />
+            <img onClick={toggleVisibility} src={icon} alt='eye' className='absolute top-[15px] right-[10px]' />
+          </div>
+          <button className='common-btn'>
+            Log In
+          </button>
+        </div>
+        <div className='justify-center items-center flex flex-col gap-[24px]'>
+          <a
+            href='/forgot-password'
+            className='[font-family:var(--font-league)] text-[#5183F4] font-semibold text-base sm:text-xl '>
+            I forgot my password
+          </a>
+          <p className='text-base sm:text-xl text-[#181A20] font-normal [font-family:var(--font-league)]'>
+            Don’t you have an account?{' '}
+            <a href='/signup-step-1' className='text-[#5183F4] font-semibold'>
+              Sign up
+            </a>
+          </p>
         </div>
       </div>
     </div>

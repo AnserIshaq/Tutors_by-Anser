@@ -5,9 +5,9 @@ import Login from '../Components/login'
 const LoginScreen = () => {
   return (
     <>
-      <AuthBar/>
-      <Login/>
-      </>
+      <AuthBar />
+      <Login />
+    </>
   )
 }
 
