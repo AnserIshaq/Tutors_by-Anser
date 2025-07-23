@@ -3,7 +3,7 @@
 /* Root Styles */
 :root {
   --font-jakarta: 'Plus Jakarta Sans', sans-serif;
-  --font-league: ' League Spartan', sans-serif;
+  --font-league: 'League Spartan', sans-serif;
 }
 
 .contain {
@@ -15,14 +15,6 @@
 
 .common-auth-container{
   @apply flex flex-col gap-[24px] md:max-w-[424px] mx-auto mt-[100px] px-[16px]
-}
-
-.common-inputs{
-  @apply w-full border border-black h-[60px] rounded-[10px] [font-family:var(--font-league)] pl-[48px] pr-[16px] py-[16px] text-base sm:text-xl font-normal text-[#B1B1B1] focus-visible:outline-none focus-visible:border-[#5183F4]
-}
-
-.common-btn{
-  @apply w-full h-[60px] rounded-[10px] bg-[#5183F4] [font-family:var(--font-league)] text-white font-semibold text-base sm:text-xl cursor-pointer;
 }
 
 

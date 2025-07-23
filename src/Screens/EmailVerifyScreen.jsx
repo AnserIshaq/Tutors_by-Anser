@@ -1,12 +1,46 @@
 import React from 'react'
 import AuthBar from '../Components/AuthBar'
-import Emailverify from '../Components/Emailverify'
+// import Emailverify from '../Components/Emailverify'
+import CustomButton from '../Components/ui/CustomButton'
+import { Flex, Input, Typography } from 'antd'
 
 const EmailVerifyScreen = () => {
+  const onChange = (text) => {
+    console.log('onChange:', text)
+  }
+  const onInput = (value) => {
+    console.log('onInput:', value)
+  }
+  const sharedProps = {
+    onChange,
+    onInput,
+  }
   return (
     <>
       <AuthBar />
-      <Emailverify />
+      <div>
+        <div className=' common-auth-container md:px-[0] '>
+          <div className=' [font-family:var(--font-jakarta)] font-extrabold text-3xl sm:text-4xl self-center'>
+            Email Verification
+          </div>
+          <div className='[font-family:var(--font-league)] text-base sm:text-xl font-normal text-[#717171] self-center'>
+            Enter OTP to verify your email
+          </div>
+          <div className='px-[16px]'>
+            <Flex gap='middle' align='flex-start' vertical>
+              <Input.OTP formatter={(str) => str.toUpperCase()} {...sharedProps} />
+            </Flex>
+          </div>
+          <div className='flex flex-col md:flex-row gap-[24px]'>
+            <CustomButton
+              text='Resend OTP'
+              onClick={() => console.log('prop passed')}
+              className='bg-[#FFFFFF] !text-[#5183F4]  border-[2px] border-[#5183F4]'
+            />
+            <CustomButton text='Verify Email' onClick={() => console.log('prop passed')} className='' />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
