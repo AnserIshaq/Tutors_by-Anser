@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import { Select, Space } from 'antd'
 import usePasswordToggle from '../Hooks/usePasswordToggle'
 import { useNavigate } from 'react-router'
-import CustomButton from '../Components/ui/CustomButton'
+import {CustomButton} from '../Components/ui/CustomButton'
 import CustomInput from '../Components/ui/CustomInput'
-import CustomSelect from '../Components/ui/CustomeSelect'
+import CustomSelect from '../Components/ui/CustomSelect'
 
 const SignupScreen = () => {
   const [detailSection, setDetailSection] = useState(false)
@@ -19,6 +19,10 @@ const SignupScreen = () => {
   const handleChange = (value) => {
     console.log(`selected ${value}`)
   }
+  const selectOptions = [
+    { value: 'teacher', label: 'Teacher' },
+    { value: 'student', label: 'Student' },
+  ]
 
   const handleSignup = () => {
     navigate('/verify-email')
@@ -35,11 +39,13 @@ const SignupScreen = () => {
             Sign up as a
           </div>
           <div className=' flex flex-col gap-[24px]'>
-            <div className='pass-input relative'>
-              <CustomSelect onClick={handleChange} />
-              <img src='/Group.svg' alt='password' className='absolute top-[18px] left-[10px] z-[10]' />
-              <img src='/select-arrow.svg' alt='eye' className='absolute top-[18px] right-[10px] z-[10]' />
-            </div>
+            <CustomSelect
+              onChange={handleChange}
+              options={selectOptions}
+              selectClassName={'pl-[48px]!'}
+              leftIcon={'/Group.svg'}
+              rightIcon={'/select-arrow.svg'}
+            />
             {nextBtn && <CustomButton onClick={handleNext} text={'Next'} />}
           </div>
           {detailSection && (
@@ -48,17 +54,14 @@ const SignupScreen = () => {
                 Your Details
               </div>
               <div className='flex flex-col gap-[24px]'>
-                <div className='email-input relative'>
-                  {/* <input type='text' placeholder='Email' className='common-inputs' /> */}
-                  <CustomInput type={type} placeholder='Email' />
-                  <img src='/mail.svg' alt='email' className='absolute top-[15px] left-[10px]' />
-                </div>
-                <div className='pass-input relative'>
-                  <CustomInput type={type} placeholder='Password' />
-                  {/* <input type={type} placeholder='Password' className='common-inputs ' /> */}
-                  <img src='/key1.svg' alt='password' className='absolute top-[15px] left-[10px]' />
-                  <img onClick={toggleVisibility} src={icon} alt='eye' className='absolute top-[15px] right-[10px]' />
-                </div>
+                <CustomInput type={type} placeholder='Email' leftIcon={'/mail.svg'} />
+                <CustomInput
+                  type={type}
+                  placeholder='Password'
+                  leftIcon={'/key1.svg'}
+                  rightIcon={icon}
+                  onRightIconClick={toggleVisibility}
+                />
                 <CustomButton onClick={handleSignup} text={'Sign Up'} />
               </div>
               <div className=' justify-center items-center flex flex-col gap-[24px]'>

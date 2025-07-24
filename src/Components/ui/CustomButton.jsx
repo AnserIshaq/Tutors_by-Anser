@@ -1,4 +1,4 @@
-const CustomButton = ({ text, onClick, className='' }) => {
+export const CustomButton = ({ text, onClick, className = '' }) => {
   return (
     <button
       onClick={onClick}
@@ -8,6 +8,13 @@ const CustomButton = ({ text, onClick, className='' }) => {
   )
 }
 
-export default CustomButton
-
-
+export const CustomButtonWithIcon = ({ text, onClick, className = '', icon }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`w-full h-[60px] rounded-[10px] bg-white font-league text-darkText font-semibold text-base sm:text-xl cursor-pointer flex items-center justify-center gap-2.5 ${className}`}>
+      <img src={icon} alt='icon' className='w-5 h-5 object-contain' />
+      {text}
+    </button>
+  )
+}

@@ -7,7 +7,7 @@
 }
 
 .contain {
-  max-width: 1440px;
+@apply container mx-auto;
 }
 
 /* ____________________________ */
@@ -46,4 +46,44 @@
 }
 .ant-select-focused:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector{
   @apply shadow-none;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed{
+  @apply border-transparent
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-color-default{
+  @apply shadow-none;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
+  @apply border-transparent text-[#181A20];
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn{
+  @apply p-0
+}
+.ant-drawer-header{
+  @apply pr-[24px]! pl-[24px]!;
+}
+
+/* .ant-space-item{
+  @apply ml-[10px] mt-[7px];
+} */
+
+.ant-dropdown-menu-submenu-title-active {
+  @apply bg-[#EBF5FE]
+}
+.ant-drawer-extra{
+  @apply flex;
+}
+.ant-drawer-extra{
+  @apply w-full;
+}
+.ant-drawer-header-title{
+  @apply hidden!;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-drawer .ant-drawer-header{
+  @apply border-b-0
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-divider{
+  @apply text-[#B1B1B1];
 }
