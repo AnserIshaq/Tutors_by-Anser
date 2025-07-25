@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Select, Space } from 'antd'
 import usePasswordToggle from '../Hooks/usePasswordToggle'
 import { useNavigate } from 'react-router'
-import {CustomButton} from '../Components/ui/CustomButton'
+import { CustomButton } from '../Components/ui/CustomButton'
 import CustomInput from '../Components/ui/CustomInput'
 import CustomSelect from '../Components/ui/CustomSelect'
 
@@ -40,11 +40,15 @@ const SignupScreen = () => {
           </div>
           <div className=' flex flex-col gap-[24px]'>
             <CustomSelect
+            defaultValue={'Select...'}
               onChange={handleChange}
               options={selectOptions}
               selectClassName={'pl-[48px]!'}
               leftIcon={'/Group.svg'}
               rightIcon={'/select-arrow.svg'}
+              height={'h-[60px]!'}
+              rounded={'rounded-[10px]' }
+              leftIconClassName={'z-10'}
             />
             {nextBtn && <CustomButton onClick={handleNext} text={'Next'} />}
           </div>

@@ -10,19 +10,25 @@ const CustomSelect = ({
   selectClassName = '',
   rightIconClassName = '',
   leftIconClassName = '',
-  defaultValue = undefined,
+  defaultValue,
   value,
+  height = 'h-[60px]',
+  paddingX = 'px-4',
+  paddingY = 'py-2',
+  rounded = 'rounded-lg',
+  textSize = 'text-base',
+  textColor = 'text-gray-500',
+  border = 'border border-black',
+  focusBorder = 'focus:border-blue-500',
+  bg = 'bg-white',
   ...props
 }) => {
   const mergedWrapperClass = twMerge('relative w-full', className)
 
-  const mergedSelectClass = twMerge(
-    `!h-[60px] !rounded-[10px] !border !border-black !text-[#B1B1B1] 
-     !text-base sm:!text-xl !pr-[16px] !py-[16px] 
-     font-normal bg-white appearance-none 
-     focus:!border-[#5183F4] 
-     ${leftIcon ? 'pl-[48px]' : 'pl-[16px]'} 
-     ${rightIcon ? 'pr-[48px]' : 'pr-[16px]'}`,
+  const baseSelectClass = twMerge(
+    `appearance-none w-full ${height} ${rounded} ${border} ${textColor} ${textSize} 
+     ${bg} ${paddingX} ${paddingY} focus:outline-none ${focusBorder}
+     ${leftIcon ? 'pl-12' : ''} ${rightIcon ? 'pr-12' : ''}`,
     selectClassName
   )
 
@@ -32,7 +38,7 @@ const CustomSelect = ({
         <img
           src={leftIcon}
           alt='select icon'
-          className={`absolute top-[18px] left-[10px] z-[10] ${leftIconClassName}`}
+          className={twMerge('absolute top-1/2 left-3 -translate-y-1/2', leftIconClassName)}
         />
       )}
       <Select
@@ -40,14 +46,14 @@ const CustomSelect = ({
         defaultValue={defaultValue}
         onChange={onChange}
         options={options}
-        className={mergedSelectClass}
+        className={baseSelectClass}
         {...props}
       />
       {rightIcon && (
         <img
           src={rightIcon}
           alt='dropdown indicator'
-          className={`absolute top-[18px] right-[10px] z-[10] ${rightIconClassName}`}
+          className={twMerge('absolute top-1/2 right-3 -translate-y-1/2', rightIconClassName)}
         />
       )}
     </div>

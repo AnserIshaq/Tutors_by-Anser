@@ -63,6 +63,9 @@
 .ant-drawer-header{
   @apply pr-[24px]! pl-[24px]!;
 }
+:where(.css-dev-only-do-not-override-7t2xvq).ant-select{
+  @apply overflow-hidden;
+}
 
 /* .ant-space-item{
   @apply ml-[10px] mt-[7px];
