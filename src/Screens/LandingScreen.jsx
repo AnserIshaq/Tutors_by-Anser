@@ -4,16 +4,19 @@ import CustomSelect from '../Components/ui/CustomSelect'
 import { CustomButtonWithIcon } from '../Components/ui/CustomButton'
 import { selectOptions } from '../Static/SelectOptions'
 import TutorCard from '../Components/TutorCard'
+import Slider from '../Components/Slider'
+import Stepper from '../Components/Stepper'
 
 const LandingScreen = () => {
   return (
     <>
       <TopBar />
+      {/* START - Hero Section */}
       <section className='hero-section'>
-        <div className='hero contain px-0 sm:px-[24px] md:px-[60px] mt-[30px] lg:mt-[60px]'>
-          <div className='h-[406px] lg:min-h-[600px] bg-[#EBF5FE] rounded-[30px] relative '>
-            <div className='content h-[406px] lg:min-h-[600px] flex flex-row justify-between'>
-              <div className='flex flex-col justify-between h-[406px] lg:min-h-[600px] basis-[100%] lg:basis-[70%] shrink'>
+        <div className='hero contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
+          <div className='h-[406px] min-h-auto lg:min-h-[600px] bg-[#EBF5FE] rounded-[30px] relative mb-[200px] lg:mb-0'>
+            <div className='content h-auto lg:h-[406px] min-h-auto lg:min-h-[600px] flex flex-row justify-between'>
+              <div className='flex flex-col justify-between h-auto lg:h-[406px] min-h-auto lg:min-h-[600px] basis-[100%] lg:basis-[70%] shrink'>
                 <div className='hero-content flex flex-col gap-4 p-[15px] sm:p-[30px]'>
                   <div className='top-content [font-family:var(--font-jakarta)] font-extrabold text-4xl md:text-5xl lg:text-6xl pt-[15px] lg:pt-[60px]'>
                     <p className=''>Need a Tutor?</p>
@@ -111,6 +114,68 @@ const LandingScreen = () => {
           </div>
         </div>
       </section>
+      {/* END - Hero Section */}
+
+      {/* START - Slider Section */}
+      <section className='slider-section'>
+        <div className='slider--inner contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
+          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3'>
+            <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
+              Meet the most qualified <span className='text-[#5183F4]'>Tutors.</span>
+            </div>
+            <div className='desc [font-family:var(--font-league)] text-base font-normal text-[#717171] max-w-full lg:max-w-[70%]'>
+              Delve into the rich expertise and enthusiasm of our newest mentorship team members. Whether they're
+              experienced experts or up-and-coming talents, our team is committed to supporting and empowering learners
+              on their path to success.
+            </div>
+          </div>
+          <div className='slider-main'></div>
+        </div>
+        <Slider />
+      </section>
+      {/* END - Slider Section */}
+
+      {/* START - Step Section */}
+      <section className='step-section'>
+        <div className='contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
+          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3'>
+            <div className='flex justify-center gap-1.5 [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
+              How it<span className='text-[#5183F4]'> Works</span>
+            </div>
+          </div>
+          <div className='stepper-main py-[50px] relative'>
+            <Stepper
+              text='1. Browse tutors to review their background, experience, and student feedback.'
+              img='/stepper.svg'
+              step={'Step 1'}
+              isFirst
+            />
+            <Stepper
+              reverse
+              text='2. Select up to 5 tutors and add your preferred tutors to your cart. Click “My Tutors Cart”'
+              img='/stepper2.svg'
+              step={'Step 2'}
+            />
+            <Stepper
+              text='3. At the checkout page, if you are a first-time user, please create an account with your name and email address. Then, proceed to purchase contact information for up to 5 tutors.'
+              img='/stepper3.svg'
+              step={'Step 3'}
+            />
+            <Stepper
+              reverse
+              text='4. Upon completing the purchase, the email addresses of the five tutors will be delivered to your account page.'
+              img='/stepper4.svg'
+              step={'Step 4'}
+            />
+            <Stepper
+              text='15. Contact the teachers directly and begin your Japanese lessons.'
+              img='/stepper5.svg'
+              step={'Step 5'}
+            />
+          </div>
+        </div>
+      </section>
+      {/* END - Step Section */}
     </>
   )
 }

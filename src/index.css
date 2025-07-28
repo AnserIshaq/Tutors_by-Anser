@@ -7,16 +7,15 @@
 }
 
 .contain {
-@apply container mx-auto;
+  @apply container mx-auto;
 }
 
 /* ____________________________ */
 /* Common Classes */
 
-.common-auth-container{
-  @apply flex flex-col gap-[24px] md:max-w-[424px] mx-auto mt-[100px] px-[16px]
+.common-auth-container {
+  @apply flex flex-col gap-[24px] md:max-w-[424px] mx-auto mt-[100px] px-[16px];
 }
-
 
 /* ____________________________*/
 /* ant design override */
@@ -44,26 +43,31 @@
 :where(.css-dev-only-do-not-override-7t2xvq).ant-input-outlined:focus-within {
   @apply shadow-none;
 }
-.ant-select-focused:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector{
+.ant-select-focused:where(.css-dev-only-do-not-override-7t2xvq).ant-select-outlined:not(.ant-select-disabled):not(
+    .ant-select-customize-input
+  ):not(.ant-pagination-size-changer)
+  .ant-select-selector {
   @apply shadow-none;
 }
 
-:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed{
-  @apply border-transparent
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed {
+  @apply border-transparent;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-color-default{
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-color-default {
   @apply shadow-none;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
   @apply border-transparent text-[#181A20];
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-btn{
-  @apply p-0
+:where(.css-dev-only-do-not-override-7t2xvq).ant-btn {
+  @apply p-0;
 }
-.ant-drawer-header{
+.ant-drawer-header {
   @apply pr-[24px]! pl-[24px]!;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-select{
+:where(.css-dev-only-do-not-override-7t2xvq).ant-select {
   @apply overflow-hidden;
 }
 
@@ -72,21 +76,31 @@
 } */
 
 .ant-dropdown-menu-submenu-title-active {
-  @apply bg-[#EBF5FE]
+  @apply bg-[#EBF5FE];
 }
-.ant-drawer-extra{
+.ant-drawer-extra {
   @apply flex;
 }
-.ant-drawer-extra{
+.ant-drawer-extra {
   @apply w-full;
 }
-.ant-drawer-header-title{
+.ant-drawer-header-title {
   @apply hidden!;
 }
 
-:where(.css-dev-only-do-not-override-7t2xvq).ant-drawer .ant-drawer-header{
-  @apply border-b-0
+:where(.css-dev-only-do-not-override-7t2xvq).ant-drawer .ant-drawer-header {
+  @apply border-b-0;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-divider{
+:where(.css-dev-only-do-not-override-7t2xvq).ant-divider {
   @apply text-[#B1B1B1];
+}
+
+/* slider */
+
+.swiper-slide{
+  /* @apply w-[268px]! rounded-[10px] */
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-divider-horizontal{
+  @apply my-[12px]!
 }
