@@ -1,79 +1,100 @@
+import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
-import { Divider } from 'antd'
-import { CustomButtonWithIcon } from './ui/CustomButton'
-import { sliderData } from '../Static/SliderData'
-const Slider = () => {
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import CustomCard from './ui/CustomCard'
+const Slider = ({ showNavigation, showPagination, data, sliderPerView, cardMode = 'profile' }) => {
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
+  const paginationRef = useRef(null)
   return (
-    <Swiper
-      className='my-swiper'
-      spaceBetween={5}
-      slidesPerView={5}
-      modules={[Autoplay]}
-      loop={true}
-      loopFillGroupWithBlank={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true, // Optional: pause on hover
-      }}
-      centeredSlides={false}
-      breakpoints={{
-        // Responsive breakpoints to ensure proper loop behavior
-        300: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        460: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-        },
-        1200: {
-          slidesPerView: 5,
-          spaceBetween: 24,
-        },
-      }}>
-      {sliderData.map((item) => (
-        <SwiperSlide key={item.id}>
-          <div className='slider-item rounded-[10px] p-4 sm:p-0'>
-            <div className='slider-img'>
-              <img src={item.img} alt={item.name} className='w-full' />
+    <>
+      <div className='relative w-full'>
+        {showNavigation && (
+          <>
+            <div
+              ref={prevRef}
+              className='custom-swiper-prev absolute right-[8%] top-[-15%] -translate-y-1/2 z-10 cursor-pointer'>
+              <img src='/blog-arrow.svg' alt='prev' />
             </div>
-            <div className='slider-content p-2.5 shadow-[0_4px_40px_0_rgba(0,117,225,0.1)] [font-family(var(--font-league))]'>
-              <p className='text-xl text-[#5183F4] font-semibold'>{item.name}</p>
-              <p className='text-base text-[#B1B1B1] font-normal'>{item.location}</p>
-              <Divider />
-              <p className='text-base text-[#717171] font-semibold'>Languages:</p>
-              <p className='text-base text-[#B1B1B1] font-normal'>{item.languages}</p>
-              <Divider />
-              <div>
-                <p className='text-base text-[#717171] font-semibold'>Fee Structure</p>
-                {item.fee.map((f, idx) => (
-                  <div key={idx} className='flex justify-between text-base text-[#B1B1B1] font-normal'>
-                    <p>{f.label}</p>
-                    <p>{f.price}</p>
-                  </div>
-                ))}
-              </div>
+            {showPagination && (
+              <div
+                ref={paginationRef}
+                className='custom-swiper-pagination mt-4 text-center absolute top-[-20%] right-5'></div>
+            )}
+            <div
+              ref={nextRef}
+              className='custom-swiper-next absolute top-[-15%] right-0 -translate-y-1/2 z-10 cursor-pointer rotate-180'>
+              <img src='/blog-arrow.svg' alt='next' />
             </div>
-            <CustomButtonWithIcon
-              text={'Add to cart'}
-              icon={'/white-cart.svg'}
-              className='bg-[#5183F4]! text-base! font-normal! rounded-tl-none rounded-tr-none text-white h-[44px]!'
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </>
+        )}
+
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={sliderPerView}
+          loop={true}
+          autoplay={{ delay: 2000 }}
+          pagination={
+            showPagination
+              ? {
+                  el: paginationRef.current,
+                  clickable: true,
+                  dynamicBullets: true,
+                  dynamicMainBullets: 1,
+                }
+              : false
+          }
+          navigation={
+            showNavigation
+              ? {
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                }
+              : false
+          }
+          onBeforeInit={(swiper) => {
+            if (showNavigation) {
+              swiper.params.navigation.prevEl = prevRef.current
+              swiper.params.navigation.nextEl = nextRef.current
+            }
+            if (showPagination) {
+              swiper.params.pagination.el = paginationRef.current
+            }
+          }}
+          modules={[Autoplay, Pagination, Navigation]}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            460: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: cardMode === 'profile' ? 4 : 3,
+              spaceBetween: 15,
+            },
+            1200: {
+              slidesPerView: sliderPerView,
+              spaceBetween: 24,
+            },
+          }}>
+          {data.map((item) => (
+            <SwiperSlide key={item.id}>
+              <CustomCard item={item} mode={cardMode} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </>
   )
 }
 

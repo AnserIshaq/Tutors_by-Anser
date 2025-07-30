@@ -89,3 +89,34 @@ export const sliderData = [
     img: '/slider1.svg',
   },
 ]
+
+export const blogData = [
+  {
+    id: 1,
+    title: 'Finding the Perfect Tutor: 6 Tips for a Successful Match',
+    desc: 'Discover how to choose the right tutor for your child or yourself, ensuring a productive......',
+    date: 'July 02, 2024',
+    img: '/blog1.svg',
+  },
+  {
+    id: 2,
+    title: 'Finding the Perfect Tutor: 6 Tips for a Successful Match',
+    desc: 'Discover how to choose the right tutor for your child or yourself, ensuring a productive......',
+    date: 'July 02, 2024',
+    img: '/blog1.svg',
+  },
+  {
+    id: 3,
+    title: 'Finding the Perfect Tutor: 6 Tips for a Successful Match',
+    desc: 'Discover how to choose the right tutor for your child or yourself, ensuring a productive......',
+    date: 'July 02, 2024',
+    img: '/blog1.svg',
+  },
+  {
+    id: 4,
+    title: 'Finding the Perfect Tutor: 6 Tips for a Successful Match',
+    desc: 'Discover how to choose the right tutor for your child or yourself, ensuring a productive......',
+    date: 'July 02, 2024',
+    img: '/blog1.svg',
+  },
+]

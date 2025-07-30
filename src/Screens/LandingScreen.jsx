@@ -1,18 +1,23 @@
 import React from 'react'
 import TopBar from '../Components/TopBar'
 import CustomSelect from '../Components/ui/CustomSelect'
-import { CustomButtonWithIcon } from '../Components/ui/CustomButton'
+import { CustomButton, CustomButtonWithIcon } from '../Components/ui/CustomButton'
 import { selectOptions } from '../Static/SelectOptions'
 import TutorCard from '../Components/TutorCard'
 import Slider from '../Components/Slider'
 import Stepper from '../Components/Stepper'
+import Reasons from '../Components/Reasons'
+import CustomCollapse from '../Components/ui/CustomCollapse'
+import { blogData, sliderData } from '../Static/SliderData'
+import CustomInput from '../Components/ui/CustomInput'
+import Footer from '../Components/Footer'
 
 const LandingScreen = () => {
   return (
     <>
       <TopBar />
       {/* START - Hero Section */}
-      <section className='hero-section'>
+      <section className='hero-section pb-[15px] lg:pb-[60px]'>
         <div className='hero contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
           <div className='h-[406px] min-h-auto lg:min-h-[600px] bg-[#EBF5FE] rounded-[30px] relative mb-[200px] lg:mb-0'>
             <div className='content h-auto lg:h-[406px] min-h-auto lg:min-h-[600px] flex flex-row justify-between'>
@@ -117,13 +122,13 @@ const LandingScreen = () => {
       {/* END - Hero Section */}
 
       {/* START - Slider Section */}
-      <section className='slider-section'>
-        <div className='slider--inner contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
-          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3'>
+      <section className='slider-section  my-[15px] lg:my-[60px]'>
+        <div className='slider--inner contain px-0 sm:px-[24px] md:px-[60px]'>
+          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3 mb-[24px]'>
             <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
               Meet the most qualified <span className='text-[#5183F4]'>Tutors.</span>
             </div>
-            <div className='desc [font-family:var(--font-league)] text-base font-normal text-[#717171] max-w-full lg:max-w-[70%]'>
+            <div className='desc [font-family:var(--font-league)] text-base lg:text-xl font-normal text-[#717171] max-w-full lg:max-w-[70%]'>
               Delve into the rich expertise and enthusiasm of our newest mentorship team members. Whether they're
               experienced experts or up-and-coming talents, our team is committed to supporting and empowering learners
               on their path to success.
@@ -131,13 +136,13 @@ const LandingScreen = () => {
           </div>
           <div className='slider-main'></div>
         </div>
-        <Slider />
+        <Slider showNavigation={false} showPagination={false} data={sliderData} sliderPerView={5} cardMode='profile' />
       </section>
       {/* END - Slider Section */}
 
       {/* START - Step Section */}
-      <section className='step-section'>
-        <div className='contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
+      <section className='step-section  py-[15px] lg:py-[60px]'>
+        <div className='contain pl-[24px] pr-[16px] sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
           <div className='content flex flex-col gap-[16px] px-3 lg:pl-3'>
             <div className='flex justify-center gap-1.5 [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
               How it<span className='text-[#5183F4]'> Works</span>
@@ -148,6 +153,7 @@ const LandingScreen = () => {
               text='1. Browse tutors to review their background, experience, and student feedback.'
               img='/stepper.svg'
               step={'Step 1'}
+              mobStep={'1'}
               isFirst
             />
             <Stepper
@@ -155,27 +161,179 @@ const LandingScreen = () => {
               text='2. Select up to 5 tutors and add your preferred tutors to your cart. Click “My Tutors Cart”'
               img='/stepper2.svg'
               step={'Step 2'}
+              mobStep={'2'}
             />
             <Stepper
-              text='3. At the checkout page, if you are a first-time user, please create an account with your name and email address. Then, proceed to purchase contact information for up to 5 tutors.'
+              text='3. At the checkout page, if you are a first-time user, please create an account with your name and email address.'
               img='/stepper3.svg'
               step={'Step 3'}
+              mobStep={'3'}
             />
             <Stepper
               reverse
-              text='4. Upon completing the purchase, the email addresses of the five tutors will be delivered to your account page.'
-              img='/stepper4.svg'
+              text='4. Contact the teachers directly and begin your Japanese lessons.'
+              img='/stepper5.svg'
               step={'Step 4'}
+              mobStep={'4'}
             />
             <Stepper
-              text='15. Contact the teachers directly and begin your Japanese lessons.'
-              img='/stepper5.svg'
+              isLast
+              text='5. Contact the teachers directly and begin your Japanese lessons.'
+              img='/stepper4.svg'
               step={'Step 5'}
+              mobStep={'5'}
             />
           </div>
         </div>
       </section>
       {/* END - Step Section */}
+
+      {/* START - Reasons Section */}
+      <section className='reasons-section py-[15px] lg:py-[120px] bg-[#F7F7F7]'>
+        <div className='reason-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain'>
+          <div className='reason-inner flex justify-between flex-col lg:flex-row  px-[12px]'>
+            <div className='images w-full lg:w-[50%] relative mb-[100px] lg:mb-0 '>
+              <img src='/reason1.svg' alt='reasons' className='relative z-2 ' />
+              <img src='/Rblob.svg' alt='blob' className='absolute top-[-48px] left-[-67px] z-1' />
+              <img src='/RDots.svg' alt='dots' className='absolute top-[-85px] lg:left-[-40px] z-1' />
+              <img src='/RDots.svg' alt='dots' className='absolute bottom-[-20%] right-[45%] z-3' />
+              <img src='/reason1.1.svg' alt='frame' className='absolute bottom-[-20%] right-0 lg:right-[23%] z-3' />
+              <img src='/reason1.2.svg' alt='frame' className='absolute top-[-120px] right-0 lg:right-[12%] z-3' />
+            </div>
+            <div className='content  w-full lg:w-[50%] flex flex-col gap-[16px]'>
+              <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl max-w-full lg:max-w-[100%] 2xl:max-w-[80%]'>
+                4 reasons to learn on <span className='text-[#5183F4]'>Nihongo Talkers</span>
+              </div>
+              <div className='points flex flex-col gap-[16px] [font-family:var(--font-league)]'>
+                <Reasons />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* END - Reasons Section */}
+
+      {/* START - TOUR Section */}
+      <section className=''>
+        <div className='tour-main '>
+          <div className='tour--inner relative flex justify-center items-center'>
+            <div className='image w-full h-auto lg:h-[296px]'>
+              <img src='/tutor-bg.jpg' alt='tour' className='w-full h-full object-cover' />
+              <div className='absolute top-0 left-0 w-full h-full bg-[#5183F4] opacity-50'></div>
+            </div>
+            <div className='content absolute text-white flex flex-col gap-[16px] justify-center items-center'>
+              <div className='title [font-family:var(--font-jakarta)] font-extrabold text-2xl md:text-4xl lg:text-5xl'>
+                Become A Tutor
+              </div>
+              <div className='desc [font-family:var(--font-league)] font-normal text-base lg:text-xl w-[90%] self-center text-center'>
+                Fuel learning journeys, become a mentor of creativity; ignite minds, foster brilliance, shape futures
+              </div>
+              <CustomButton
+                text={'Register Now'}
+                className={
+                  'text-[#5183F4]! bg-[#FFFFFF]! h-[50px]! w-max rounded-[50px]! py-[15px] px-[32px] font-medium! text-base!'
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end - TOUR Section */}
+
+      {/* START - FAQ Section */}
+      <section className='reasons-section py-[15px] lg:py-[120px]'>
+        {/* <div className='reason-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain '> */}
+        {/* <div className='reason-main px-[24 px] lg:pl-[60px] my-[30px] lg:my-[60px] contain  '> */}
+        <div className='reason-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain '>
+          <div className='images w-full lg:w-[40%] xl:w-[40%]  mb-[100px] lg:mb-0 relative lg:absolute lg:right-0 hidden lg:block'>
+            <img src='/faq.svg' alt='reasons' className=' z-2 absolute right-0' />
+          </div>
+          <div className='reason-inner flex justify-between flex-col lg:flex-row  px-[12px] relative gap-[24px]'>
+            <div className='content  w-full xl:w-[50%] flex flex-col gap-[16px]'>
+              <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl  xl:text-5xl max-w-full lg:max-w-[60%] 2xl:max-w-[100%]'>
+                Recent<span className='text-[#5183F4]'> Announcements</span>
+              </div>
+              <div className='desc [font-family:var(--font-league)] text-base font-normal text-[#717171] lg:max-w-[50%] xl:max-w-full'>
+                Delve into the rich expertise and enthusiasm of our newest mentorship team members. Whether they're
+                experienced experts or up-and-coming talents, our team is committed to supporting and empowering
+                learners on their path to success.
+              </div>
+              <div className='points flex flex-col gap-[16px] [font-family:var(--font-league)] lg:w-[50%] xl:w-full '>
+                <CustomCollapse />
+              </div>
+            </div>
+            <div className='images w-[100%] self-center lg:w-[40%] xl:w-[50%]  lg:mb-[100px] block lg:hidden'>
+              <img src='/faq.svg' alt='reasons' className=' z-2 rounded-[20px]' />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* END - FAQ Section */}
+
+      {/* START - Blog Section */}
+      <section className='blog-section  my-[15px] lg:my-[60px] hidden lg:block'>
+        <div className='blog--inner contain px-0 sm:px-[24px] md:px-[60px]'>
+          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3 mb-[24px]'>
+            <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
+              From Our <span className='text-[#5183F4]'>Blog</span>
+            </div>
+            <div className='desc [font-family:var(--font-league)] text-base font-normal text-[#717171] max-w-full lg:max-w-[70%]'>
+              Aliquam lacinia diam quis lacus euismod
+            </div>
+          </div>
+          <div className='blog-main '>
+            <Slider showNavigation={true} showPagination={true} data={blogData} sliderPerView={3} cardMode='blog' />
+          </div>
+        </div>
+      </section>
+      {/* END - Blog Section */}
+
+      {/* START - Form Section */}
+      <section className='form-section px-[16px] '>
+        <div className='form-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain  '>
+          <div className='form--inner  flex flex-col gap-[24px] py-[30px] md:py-[60px] px-[30px] md:px-[50px] bg-[#5183F4] text-white rounded-[30px]'>
+            <div className='title [font-family:var(--font-jakarta)] font-extrabold text-[28px] md:text-3xl xl:text-5xl'>
+              Download the FREE Japanese PDF Resources
+            </div>
+            <div className='desc [font-family:var(--font-league)] text-xl font-normal '>
+              Write your name and email address below and access to your free PDF worksheet! Once you complete the form
+              on the page and submit it, you will receive an email from us with the links to the PDF files. Please also
+              check your spam or junk folder if you don't see the email in your inbox.
+            </div>
+            <div className='form flex flex-col gap-[24px]'>
+              <div className='flex w-full gap-[24px] flex-col lg:flex-row'>
+                <CustomInput
+                  className='w-full lg:w-[50%]'
+                  inputClassName={'border-[#5183F4]! bg-white'}
+                  placeholder={'First Name'}
+                  leftIcon={'/form-person.svg'}
+                />
+                <CustomInput
+                  className='w-full  lg:w-[50%]'
+                  inputClassName={'border-[#5183F4]! bg-white'}
+                  placeholder={'Last Name'}
+                  leftIcon={'/form-person.svg'}
+                />
+              </div>
+              <div className='flex flex-col lg:flex-row gap-[24px]'>
+                <CustomInput
+                  className='basis-full lg:basis-[80%]'
+                  inputClassName={'border-[#5183F4]! bg-white'}
+                  placeholder={'Email'}
+                  leftIcon={'/mail.svg'}
+                />
+                <CustomButton
+                  text={'Submit'}
+                  className='bg-white! text-[#5183F4]! basis-full lg:basis-[20%] rounded-[50px] font-medium text-base! py-[15px] px-[23px]'
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* END - Form Section */}
+
+      <Footer/>
     </>
   )
 }

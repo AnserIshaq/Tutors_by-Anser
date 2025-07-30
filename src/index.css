@@ -97,10 +97,64 @@
 
 /* slider */
 
-.swiper-slide{
+.swiper-slide {
   /* @apply w-[268px]! rounded-[10px] */
 }
 
-:where(.css-dev-only-do-not-override-7t2xvq).ant-divider-horizontal{
-  @apply my-[12px]!
+:where(.css-dev-only-do-not-override-7t2xvq).ant-divider-horizontal {
+  @apply my-[12px]!;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header
+  .ant-collapse-expand-icon {
+  /* @apply absolute right-[20px] top-[15px]; */
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header
+  .ant-collapse-arrow
+  svg {
+  @apply text-[#5183F4] w-[2em] h-[2em] rotate-90;
+}
+
+.ant-collapse-item-active svg {
+  @apply rotate-180!;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse > .ant-collapse-item:last-child,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  /* @apply mb-[24px] */
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  @apply h-[120px]! rounded-r-[10px]! rounded-l-[0px]! shadow-[0_4px_50px_0_rgba(0,117,225,0.08)] bg-white flex flex-row-reverse justify-between items-center;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse {
+  @apply border-none;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse .ant-collapse-item:last-child > .ant-collapse-content {
+  @apply border-none;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-space-gap-col-small {
+  @apply gap-[15px] xl:gap-[24px];
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  @apply font-medium text-xl xl:text-3xl text-[#181A20];
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-collapse .ant-collapse-content {
+  @apply font-normal text-lg xl:text-xl text-[#717171];
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply top-[-18.8%]! right-7!;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  @apply left-[95%]! w-[53px]! overflow-hidden;
 }

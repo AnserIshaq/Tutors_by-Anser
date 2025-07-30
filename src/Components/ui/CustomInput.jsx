@@ -20,7 +20,7 @@ const CustomInput = ({
         type={type}
         placeholder={placeholder}
         onChange={onChange}
-        className={`common-inputs w-full border border-black rounded-[10px] [font-family:var(--font-league)] py-[16px] text-base sm:text-xl font-normal text-[#B1B1B1] focus-visible:outline-none focus-visible:border-[#5183F4] ${
+        className={`common-inputs w-full border border-black rounded-[10px] [font-family:var(--font-league)] py-[16px] text-base sm:text-xl font-normal text-[#181A20] focus-visible:outline-none focus-visible:border-[#5183F4] placeholder:text-[#B1B1B1] ${
           leftIcon ? 'pl-[48px]' : 'pl-[16px]'
         } ${rightIcon ? 'pr-[48px]' : 'pr-[16px]'} ${inputClassName}`}
         {...props}
