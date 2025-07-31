@@ -1,17 +1,18 @@
 import React from 'react'
-import TopBar from '../Components/TopBar'
+import TopBar from '../Components/Shared/TopBar'
 import CustomSelect from '../Components/ui/CustomSelect'
 import { CustomButton, CustomButtonWithIcon } from '../Components/ui/CustomButton'
 import { selectOptions } from '../Static/SelectOptions'
 import TutorCard from '../Components/TutorCard'
-import Slider from '../Components/Slider'
+import Slider from '../Components/Shared/Slider'
 import Stepper from '../Components/Stepper'
 import Reasons from '../Components/Reasons'
 import CustomCollapse from '../Components/ui/CustomCollapse'
 import { blogData, sliderData } from '../Static/SliderData'
 import CustomInput from '../Components/ui/CustomInput'
-import Footer from '../Components/Footer'
-import Tour from '../Components/Tour'
+import Footer from '../Components/Shared/Footer'
+import Tour from '../Components/Shared/Tour'
+import Steps from '../Components/Shared/Steps'
 
 const LandingScreen = () => {
   return (
@@ -142,51 +143,7 @@ const LandingScreen = () => {
       {/* END - Slider Section */}
 
       {/* START - Step Section */}
-      <section className='step-section  py-[15px] lg:py-[60px]'>
-        <div className='contain pl-[24px] pr-[16px] sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
-          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3'>
-            <div className='flex justify-center gap-1.5 [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
-              How it<span className='text-[#5183F4]'> Works</span>
-            </div>
-          </div>
-          <div className='stepper-main py-[50px] relative'>
-            <Stepper
-              text='1. Browse tutors to review their background, experience, and student feedback.'
-              img='/stepper.svg'
-              step={'Step 1'}
-              mobStep={'1'}
-              isFirst
-            />
-            <Stepper
-              reverse
-              text='2. Select up to 5 tutors and add your preferred tutors to your cart. Click “My Tutors Cart”'
-              img='/stepper2.svg'
-              step={'Step 2'}
-              mobStep={'2'}
-            />
-            <Stepper
-              text='3. At the checkout page, if you are a first-time user, please create an account with your name and email address.'
-              img='/stepper3.svg'
-              step={'Step 3'}
-              mobStep={'3'}
-            />
-            <Stepper
-              reverse
-              text='4. Contact the teachers directly and begin your Japanese lessons.'
-              img='/stepper5.svg'
-              step={'Step 4'}
-              mobStep={'4'}
-            />
-            <Stepper
-              isLast
-              text='5. Contact the teachers directly and begin your Japanese lessons.'
-              img='/stepper4.svg'
-              step={'Step 5'}
-              mobStep={'5'}
-            />
-          </div>
-        </div>
-      </section>
+      <Steps />
       {/* END - Step Section */}
 
       {/* START - Reasons Section */}
@@ -215,7 +172,12 @@ const LandingScreen = () => {
       {/* END - Reasons Section */}
 
       {/* START - TOUR Section */}
-      <Tour />
+      <Tour
+        heading={'Become A Tutor'}
+        desc={'Fuel learning journeys, become a mentor of creativity; ignite minds, foster brilliance, shape futures'}
+        btnText={'Register Now'}
+        descClass={'font-normal text-base lg:text-xl w-[90%]'}
+      />
       {/* end - TOUR Section */}
 
       {/* START - FAQ Section */}
@@ -260,7 +222,17 @@ const LandingScreen = () => {
             </div>
           </div>
           <div className='blog-main '>
-            <Slider showNavigation={true} showPagination={true} data={blogData} sliderPerView={3} cardMode='blog' />
+            <Slider
+              showNavigation={true}
+              showPagination={true}
+              data={blogData}
+              sliderPerView={3}
+              cardMode='blog'
+              prevBtnClass={'right-[8%] top-[-15%] -translate-y-1/2 z-10'}
+              nextBtnClass={'top-[-15%] right-0 -translate-y-1/2 z-10  rotate-180'}
+              paginationClass={'mt-4 text-center absolute top-[-20%] right-5'}
+              wrapperClass={'slider-style-for-blog-section'}
+            />
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import AuthBar from '../Components/AuthBar'
+import AuthBar from '../Components/Shared/AuthBar'
 import usePasswordToggle from '../Hooks/usePasswordToggle'
 import CustomInput from '../Components/ui/CustomInput'
 import {CustomButton} from '../Components/ui/CustomButton'

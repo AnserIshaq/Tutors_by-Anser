@@ -10,6 +10,26 @@
   @apply container mx-auto;
 }
 
+h1 {
+  @apply [font-family:var(--font-jakarta)] font-extrabold text-4xl sm:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply [font-family:var(--font-jakarta)] font-extrabold text-4xl lg:text-5xl;
+}
+
+p {
+  font-family: var(--font-league);
+}
+
+.about-bg-main {
+  @apply bg-no-repeat bg-cover h-[300px];
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/about-bg.svg');
+  background-position: 50%;
+  background-size: cover;
+  background-color: #d3d3d3;
+}
+
 /* ____________________________ */
 /* Common Classes */
 
@@ -147,14 +167,42 @@
   @apply font-normal text-lg xl:text-xl text-[#717171];
 }
 
-.swiper-pagination-fraction,
+/* .slider-style-for-blog-section .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   @apply top-[-18.8%]! right-7!;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.slider-style-for-blog-section .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   @apply left-[95%]! w-[53px]! overflow-hidden;
+} */
+/* Pagination bullets (scoped) */
+.slider-style-for-blog-section .swiper-pagination-fraction,
+.slider-style-for-blog-section .swiper-pagination-custom,
+.slider-style-for-blog-section .swiper-horizontal > .swiper-pagination-bullets,
+.slider-style-for-blog-section .swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply top-[-18.8%]! right-7!;
+}
+
+/* Dynamic bullets (scoped) */
+.slider-style-for-blog-section .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.slider-style-for-blog-section
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  @apply left-[95%]! w-[53px]! overflow-hidden;
+}
+
+.slider-style-for-testimonial-section .swiper-pagination-fraction,
+.slider-style-for-testimonial-section .swiper-pagination-custom,
+.slider-style-for-testimonial-section .swiper-horizontal > .swiper-pagination-bullets,
+.slider-style-for-testimonial-section .swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply bottom-[-10%]! right-5!  hidden md:block;
+}
+
+/* Dynamic bullets (scoped) */
+.slider-style-for-testimonial-section .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.slider-style-for-testimonial-section
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  @apply left-[50%]! w-[70px]! overflow-hidden;
 }

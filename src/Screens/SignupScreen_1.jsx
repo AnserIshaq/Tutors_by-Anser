@@ -1,4 +1,4 @@
-import AuthBar from '../Components/AuthBar'
+import AuthBar from '../Components/Shared/AuthBar'
 import React, { useState } from 'react'
 import { Select, Space } from 'antd'
 import usePasswordToggle from '../Hooks/usePasswordToggle'

@@ -1,4 +1,4 @@
-import AuthBar from '../Components/AuthBar'
+import AuthBar from '../Components/Shared/AuthBar'
 import {CustomButton} from '../Components/ui/CustomButton'
 import CustomOTP from '../Components/ui/CustomOTP'
 

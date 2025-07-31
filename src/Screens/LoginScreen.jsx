@@ -1,9 +1,9 @@
 import React from 'react'
-import AuthBar from '../Components/AuthBar'
+import AuthBar from '../Components/Shared/AuthBar'
 import usePasswordToggle from '../Hooks/usePasswordToggle'
 import {CustomButton} from '../Components/ui/CustomButton'
 import CustomInput from '../Components/ui/CustomInput'
-import TopBar from '../Components/TopBar'
+import TopBar from '../Components/Shared/TopBar'
 const LoginScreen = () => {
   const { type, icon, toggleVisibility } = usePasswordToggle()
 

@@ -7,12 +7,14 @@ import './index.css'
 import VerifyOtpScreen from './Screens/VerifyOtpScreen'
 import EmailVerifyScreen from './Screens/EmailVerifyScreen'
 import LandingScreen from './Screens/LandingScreen'
+import AboutScreen from './Screens/AboutScreen'
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<LandingScreen />} />
+          <Route path='/about-us' element={<AboutScreen />} />
           <Route path='/login' element={<LoginScreen />} />
           <Route path='/forgot-password' element={<FotgotScreen />} />
           <Route path='/signup-step-1' element={<SignupScreen />} />

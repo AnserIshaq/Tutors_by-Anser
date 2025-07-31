@@ -14,7 +14,7 @@ const Stepper = ({ reverse = false, text, img, step, mobStep, isFirst = false, i
           </div>
         </div>
         <div
-          className={`stepper--line flex flex-row md:flex-row justify-center w-[1px] basis-[10%] absolute left-[0%] md:left-[50%]  items-center top-[0] md:top-[50%]  ${
+          className={`stepper--line flex flex-row md:flex-row justify-center w-[1px] basis-[10%] absolute left-[0%] md:left-[50%]  items-center top-[0] md:top-[50%] [font-family(var(--font-league)]  ${
             isFirst ? 'items-start' : ''
           }`}>
           <div

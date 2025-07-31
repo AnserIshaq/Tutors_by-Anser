@@ -1,5 +1,5 @@
 import React from 'react'
-import AuthBar from '../Components/AuthBar'
+import AuthBar from '../Components/Shared/AuthBar'
 import { useNavigate } from 'react-router'
 import {CustomButton} from '../Components/ui/CustomButton'
 import CustomInput from '../Components/ui/CustomInput'
