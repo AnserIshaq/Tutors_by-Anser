@@ -140,7 +140,7 @@
   @apply gap-[15px] xl:gap-[24px];
 }
 :where(.css-dev-only-do-not-override-7t2xvq).ant-collapse > .ant-collapse-item > .ant-collapse-header {
-  @apply font-medium text-xl xl:text-3xl text-[#181A20];
+  @apply font-medium text-base md:text-xl xl:text-3xl text-[#181A20] ml-[100px]!;
 }
 
 :where(.css-dev-only-do-not-override-7t2xvq).ant-collapse .ant-collapse-content {
