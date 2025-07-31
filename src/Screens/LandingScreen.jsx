@@ -200,8 +200,8 @@ const LandingScreen = () => {
               <img src='/reason1.1.svg' alt='frame' className='absolute bottom-[-20%] right-0 lg:right-[23%] z-3' />
               <img src='/reason1.2.svg' alt='frame' className='absolute top-[-120px] right-0 lg:right-[12%] z-3' />
             </div>
-            <div className='content  w-full lg:w-[50%] flex flex-col gap-[16px]'>
-              <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl max-w-full lg:max-w-[100%] 2xl:max-w-[80%]'>
+            <div className='content [font-family:var(--font-jakarta)] w-full lg:w-[50%] flex flex-col gap-[16px]'>
+              <div className='title font-extrabold text-3xl md:text-4xl lg:text-5xl max-w-full lg:max-w-[100%] 2xl:max-w-[80%]'>
                 4 reasons to learn on <span className='text-[#5183F4]'>Nihongo Talkers</span>
               </div>
               <div className='points flex flex-col gap-[16px] [font-family:var(--font-league)]'>

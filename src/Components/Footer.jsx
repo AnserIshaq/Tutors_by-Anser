@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='footer bg-[#EBF5FE] bg-[url(/footerlayer.png)]'>
+    <div className='footer bg-[#EBF5FE] bg-[url(/footerlayer.png)] [font-family:var(--font-league)]'>
       <div className='footer-main px-0 sm:px-[24px] md:px-[60px] mt-[30px] lg:mt-[60px]  contain'>
         <div className='footer-inner pt-[30px] md:pt-[60px] px-[30px] md:px-[12px] flex flex-col lg:flex-row gap-[24px] '>
           <div className='flex flex-col basis-full lg:basis-[60%] gap-[24px]'>

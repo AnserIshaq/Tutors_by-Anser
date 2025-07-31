@@ -10,8 +10,8 @@ const Reasons = () => {
             <img src={item.icon} alt='icons' className='h-[36px] w-[36px]' />
           </div>
           <div className='content-inner'>
-            <div className='title'>{item.title}</div>
-            <div className='desc'>{item.desc}</div>
+            <div className='title font-semibold text-xl'>{item.title}</div>
+            <div className='desc font-normal text-base text-[#717171]'>{item.desc}</div>
           </div>
         </div>
       ))}
