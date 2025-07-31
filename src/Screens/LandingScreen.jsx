@@ -11,6 +11,7 @@ import CustomCollapse from '../Components/ui/CustomCollapse'
 import { blogData, sliderData } from '../Static/SliderData'
 import CustomInput from '../Components/ui/CustomInput'
 import Footer from '../Components/Footer'
+import Tour from '../Components/Tour'
 
 const LandingScreen = () => {
   return (
@@ -214,30 +215,7 @@ const LandingScreen = () => {
       {/* END - Reasons Section */}
 
       {/* START - TOUR Section */}
-      <section className=''>
-        <div className='tour-main '>
-          <div className='tour--inner relative flex justify-center items-center'>
-            <div className='image w-full h-auto lg:h-[296px]'>
-              <img src='/tutor-bg.jpg' alt='tour' className='w-full h-full object-cover' />
-              <div className='absolute top-0 left-0 w-full h-full bg-[#5183F4] opacity-50'></div>
-            </div>
-            <div className='content absolute text-white flex flex-col gap-[16px] justify-center items-center'>
-              <div className='title [font-family:var(--font-jakarta)] font-extrabold text-2xl md:text-4xl lg:text-5xl'>
-                Become A Tutor
-              </div>
-              <div className='desc [font-family:var(--font-league)] font-normal text-base lg:text-xl w-[90%] self-center text-center'>
-                Fuel learning journeys, become a mentor of creativity; ignite minds, foster brilliance, shape futures
-              </div>
-              <CustomButton
-                text={'Register Now'}
-                className={
-                  'text-[#5183F4]! bg-[#FFFFFF]! h-[50px]! w-max rounded-[50px]! py-[15px] px-[32px] font-medium! text-base!'
-                }
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Tour />
       {/* end - TOUR Section */}
 
       {/* START - FAQ Section */}
@@ -333,7 +311,7 @@ const LandingScreen = () => {
       </section>
       {/* END - Form Section */}
 
-      <Footer/>
+      <Footer />
     </>
   )
 }
