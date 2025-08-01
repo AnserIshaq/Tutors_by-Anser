@@ -21,12 +21,12 @@ const CustomCard = ({ item, mode = 'profile' }) => {
               <div className='flex justify-between'>
                 <div className='flex flex-col md:flex-row items-center gap-2.5 md:gap-[24px]'>
                   <img src={item.profileIcon} alt='' />
-                  <p className='text-base text-[#5183F4] font-normal'>{item.name}</p>
+                  <p className='text-xl text-[#5183F4] font-semibold'>{item.name}</p>
                 </div>
                 <img src={item.quotesIcon} alt='' />
               </div>
               <div>
-                <p className='text-base text-[#717171] font-normal mt-[10px]'>{item.description}</p>
+                <p className='text-base md:text-xl text-[#717171] font-normal mt-[10px]'>{item.description}</p>
               </div>
             </div>
           </>
@@ -34,6 +34,26 @@ const CustomCard = ({ item, mode = 'profile' }) => {
 
       case 'profile':
       default:
+        return (
+          <>
+            <p className='text-xl text-[#5183F4] font-semibold'>{item.name}</p>
+            <p className='text-base text-[#B1B1B1] font-normal'>{item.location}</p>
+            <Divider />
+            <p className='text-base text-[#717171] font-semibold'>Languages:</p>
+            <p className='text-base text-[#B1B1B1] font-normal'>{item.languages}</p>
+            <Divider />
+            <div>
+              <p className='text-base text-[#717171] font-semibold'>Fee Structure</p>
+              {item.fee?.map((f, idx) => (
+                <div key={idx} className='flex justify-between text-base text-[#B1B1B1] font-normal'>
+                  <p>{f.label}</p>
+                  <p>{f.price}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        )
+      case 'jap-lang':
         return (
           <>
             <p className='text-xl text-[#5183F4] font-semibold'>{item.name}</p>
@@ -62,10 +82,14 @@ const CustomCard = ({ item, mode = 'profile' }) => {
         <img src={item.img} alt={item.name || item.title} className='w-full' />
       </div>
       <div
-        className={`slider-content p-2.5 rounded-[10px] ${
+        className={`slider-content rounded-[10px] ${
           mode === 'profile'
-            ? 'shadow-[0_4px_40px_0_rgba(0,117,225,0.1)]'
-            : 'shadow-[0_0_40px_0_rgba(0,0,0,0.1)] bg-white'
+            ? 'shadow-[0_4px_40px_0_rgba(0,117,225,0.1)] p-2.5'
+            : mode === 'blog'
+            ? 'p-2.5'
+            : mode === 'testimonial'
+            ? 'shadow-[0_0_40px_0_rgba(0,0,0,0.1)] bg-white p-6'
+            : ''
         } [font-family(var(--font-league))]`}>
         {renderContent(item, mode)}
       </div>

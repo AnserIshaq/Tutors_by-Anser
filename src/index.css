@@ -29,6 +29,15 @@ p {
   background-size: cover;
   background-color: #d3d3d3;
 }
+.become-tutor-bg-main {
+  background: linear-gradient(270deg, rgba(81, 131, 244, 0), rgba(81, 131, 244, 0.2)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/tutor-main-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d3d3d3;
+  min-height: 550px;
+  background-size: cover;
+}
 
 /* ____________________________ */
 /* Common Classes */

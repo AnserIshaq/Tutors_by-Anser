@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
     "module": "esnext",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],

@@ -8,6 +8,7 @@ import VerifyOtpScreen from './Screens/VerifyOtpScreen'
 import EmailVerifyScreen from './Screens/EmailVerifyScreen'
 import LandingScreen from './Screens/LandingScreen'
 import AboutScreen from './Screens/AboutScreen'
+import BecomeTutorScreen from './Screens/BecomeTutorScreen'
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingScreen />} />
           <Route path='/about-us' element={<AboutScreen />} />
+          <Route path='/become-tutor' element={<BecomeTutorScreen />} />
           <Route path='/login' element={<LoginScreen />} />
           <Route path='/forgot-password' element={<FotgotScreen />} />
           <Route path='/signup-step-1' element={<SignupScreen />} />

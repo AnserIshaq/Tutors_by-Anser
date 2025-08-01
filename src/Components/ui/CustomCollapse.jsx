@@ -2,7 +2,7 @@ import React from 'react'
 import { Collapse, Space } from 'antd'
 import { faqData } from '../../Static/FAQData'
 
-const App = () => (
+const CustomCollapse = () => (
   <Space direction='vertical'>
     <Space direction='vertical' className='w-full'>
       {faqData.map(({ key, day, month, label, text }) => (
@@ -14,7 +14,7 @@ const App = () => (
             <div>{month}</div>
           </div>
             <Collapse
-            className=''
+            className='custom-collapse'
               size='large'
               accordion
               items={[
@@ -31,4 +31,4 @@ const App = () => (
     </Space>
   </Space>
 )
-export default App
+export default CustomCollapse
