@@ -100,9 +100,6 @@ p {
   @apply overflow-hidden;
 }
 
-/* .ant-space-item{
-  @apply ml-[10px] mt-[7px];
-} */
 
 .ant-dropdown-menu-submenu-title-active {
   @apply bg-[#EBF5FE];
@@ -124,11 +121,6 @@ p {
   @apply text-[#B1B1B1];
 }
 
-/* slider */
-
-.swiper-slide {
-  /* @apply w-[268px]! rounded-[10px] */
-}
 
 :where(.css-dev-only-do-not-override-7t2xvq).ant-divider-horizontal {
   @apply my-[12px]!;
@@ -208,3 +200,21 @@ p {
   .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   @apply left-[50%]! w-[70px]! overflow-hidden;
 }
+
+
+/* custom steps section */
+:where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-title::after{
+  @apply h-[15px]! rounded-[50px]
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item{
+  @apply flex-1!
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-icon{
+  @apply hidden
+}
+/* :where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title{
+  @apply 
+} */
+/* :where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title{
+  @apply 
+} */
