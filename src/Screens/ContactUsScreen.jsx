@@ -68,6 +68,10 @@ const ContactUsScreen = () => {
       </section>
       {/* START - Contact hero section */}
       <FormSection
+        showBtn={true}
+        showImage={true}
+        image={'/formSectionDots.svg'}
+        imageClass={'bottom-0 right-0 z-1'}
         inputs={false}
         title={'Become a Tutor'}
         desc={

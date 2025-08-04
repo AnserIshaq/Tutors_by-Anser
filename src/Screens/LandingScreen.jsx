@@ -222,6 +222,7 @@ const LandingScreen = () => {
         desc={
           'Write your name and email address below and access to your free PDF worksheet! Once you complete the form    on the page and submit it, you will receive an email from us with the links to the PDF files. Please also check your spam or junk folder if you dont see the email in your inbox.'
         }
+        showBtn={true}
         btnText={'Submit'}
       />
       {/* END - Form Section */}

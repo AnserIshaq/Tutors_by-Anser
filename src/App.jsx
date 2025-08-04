@@ -10,6 +10,7 @@ import LandingScreen from './Screens/LandingScreen'
 import AboutScreen from './Screens/AboutScreen'
 import BecomeTutorScreen from './Screens/BecomeTutorScreen'
 import ContactUsScreen from './Screens/ContactUsScreen'
+import FAQScreen from './Screens/FAQScreen'
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path='/about-us' element={<AboutScreen />} />
           <Route path='/become-tutor' element={<BecomeTutorScreen />} />
           <Route path='/contact-us' element={<ContactUsScreen />} />
+          <Route path='/faq' element={<FAQScreen />} />
           <Route path='/login' element={<LoginScreen />} />
           <Route path='/forgot-password' element={<FotgotScreen />} />
           <Route path='/signup-step-1' element={<SignupScreen />} />
