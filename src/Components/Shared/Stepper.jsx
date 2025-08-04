@@ -9,9 +9,9 @@ const Stepper = ({ reverse = false, text, desc, img, step, mobStep, isFirst = fa
         } flex mt-[40px] md:mt-[50px] ${
           reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row '
         } justify-end md:justify-between items-end md:items-center px-2.5 [font-family(var(--font-league)] pl-[40px] sm:pl-[80px] md:pl-0 gap-[20px] md:gap-0`}>
-        <div className={`max-w-60%  lg:max-w-[40%] flex basis-[40%] mt-0 md:mt-[24px] font-medium `}>
+        <div className={`max-w-60%  lg:max-w-[40%] flex basis-[40%] mt-0 md:mt-[24px] font-medium ${reverse ? '2xl:justify-start' : '2xl:justify-end'}`}>
           <div
-            className={`max-w-100%  lg:max-w-[70%] text-xl xl:text-[26px] ${
+            className={`max-w-100%  lg:max-w-[75%] text-xl xl:text-[26px] ${
               desc ? 'text-[#5183F4]' : 'text-[#000000]'
             } ${reverse ? 'order-3' : 'order-2'}`}>
             {text}
@@ -35,7 +35,7 @@ const Stepper = ({ reverse = false, text, desc, img, step, mobStep, isFirst = fa
             {mobStep}
           </div>
         </div>
-        <div className='flex w-full basis-[40%]'>
+        <div className={`flex w-full basis-[40%] ${!reverse ? '2xl:justify-start' : '2xl:justify-end'}`}>
           <img src={img} alt='stepper' />
         </div>
       </div>
