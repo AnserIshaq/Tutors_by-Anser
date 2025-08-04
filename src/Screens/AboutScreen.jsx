@@ -17,7 +17,7 @@ const AboutScreen = () => {
       <section className=' pt-[15px] lg:pt-[120px]'>
         <div className=' px-0 sm:pr-[24px] md:pr-[60px] pl-0 sm:pl-[24px] md:pl-[60px] lg:pl-0  container mx-auto lg:mx-0 lg:mr-auto'>
           <div className='flex justify-between flex-col lg:flex-row  px-[16px] lg:px-0 gap-[24px] '>
-            <div className='images w-full lg:w-[50%] relative lg:mb-0'>
+            <div className='images w-full lg:w-[60%] relative lg:mb-0 mt-[10px]'>
               <video
                 className='relative z-2 w-full h-auto'
                 src='/file.mp4'
