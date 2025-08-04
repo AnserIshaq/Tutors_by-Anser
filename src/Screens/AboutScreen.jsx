@@ -28,7 +28,7 @@ const AboutScreen = () => {
                 loop
               />
             </div>
-            <div className='content [font-family:var(--font-jakarta)] w-full lg:w-[50%] flex flex-col gap-[16px] max-w-full 2xl:max-w-[40%]'>
+            <div className='content [font-family:var(--font-jakarta)] flex flex-col gap-[16px] w-full lg:w-[40%] max-w-full 2xl:max-w-[40%]'>
               <div className='points flex flex-col gap-[16px] [font-family:var(--font-league)]'>
                 <Reasons
                   data={LearningData}
