@@ -8,6 +8,9 @@ import Tour from '../Components/Shared/Tour'
 import Testimonials from '../Components/Shared/Testimonials'
 import { TestimonialData2 } from '../Static/TestimonialData'
 import { CustomButton } from '../Components/ui/CustomButton'
+import { TutorCardData } from '../Static/TutorCard'
+import CustomCollapse from '../Components/ui/CustomCollapse'
+import { tutorFaqData } from '../Static/FAQData'
 const BecomeTutorScreen = () => {
   return (
     <>
@@ -54,6 +57,32 @@ const BecomeTutorScreen = () => {
       </section>
       {/* END - Tutor Section */}
 
+      {/* START - Card Section */}
+      <section className='bg-[#F7F7F7]'>
+        <div className=' contain px-[16px] sm:[px-[24px] md:px-[60px]'>
+          <div className='py-[60px]'>
+            <div className='content text-center mb-[24px]'>
+              <h1 className='title text-[#5183F4] mb-[16px]'>日本語講師募集中!</h1>
+              <p className='desc'>以下の条件に当てはまる方、大歓迎！</p>
+            </div>
+            <div className='card flex flex-wrap xl:flex-nowrap gap-[24px]'>
+              {TutorCardData.map((item, idx) => (
+                <div
+                  key={idx}
+                  className='card--inner p-[24px] rounded-[10px] bg-[#FFFFFF] flex flex-col gap-[16px] justify-center items-center basis-full md:basis-[48%] xl:basis-[25%]'>
+                  <div className='img'>
+                    <img src={item.image} alt='message' />
+                  </div>
+                  <p className='title  text-[#5183F4] text-center text-xl font-normal w-[80%]'>{item.title}</p>
+                  <p className='desc text-center text-base font-normal text-[#717171]'>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end - Card Section */}
+
       <Steps data={stepperData2} />
       <Tour
         heading={'日本語の先生になって収入を増やしませんか'}
@@ -62,6 +91,22 @@ const BecomeTutorScreen = () => {
         btnText={'日本語の先生になる'}
         bgImage={'/tutor-bg-1.jpg'}
       />
+      <section className='pt-[60px] md:pt-[120px]'>
+        <div className='contain custom-tutor-faq px-[16px] sm:[px-[24px] md:px-[60px]'>
+          <div className=''>
+            <h1 className='title text-[#5183F4] mb-[40px] text-center'>FAQs: 日本語講師申込に関するよくある質問</h1>
+          </div>
+          <CustomCollapse
+            data={tutorFaqData}
+            className={''}
+            block={false}
+            size={'small'}
+            collapseWrapperClass={'custom-faq-collapse'}
+            contentClass={'text-xl font-normal text-[#717171]'}
+            headerClass={'text-2xl font-medium text-[#181A20]'}
+          />
+        </div>
+      </section>
       <Testimonials heading={'​日本語講師の声・体験談'} data={TestimonialData2} />
 
       <Footer />

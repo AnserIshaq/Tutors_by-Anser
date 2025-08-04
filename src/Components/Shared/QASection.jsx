@@ -1,3 +1,4 @@
+import { faqData } from '../../Static/FAQData'
 import CustomCollapse from '../ui/CustomCollapse'
 
 const QASection = () => {
@@ -18,7 +19,7 @@ const QASection = () => {
               on their path to success.
             </div>
             <div className='points flex flex-col gap-[16px] [font-family:var(--font-league)] lg:w-[50%] xl:w-full '>
-              <CustomCollapse />
+              <CustomCollapse data={faqData} className={''} block={true} size={'large'} collapseWrapperClass={'custom-announcement-collapse'}/>
             </div>
           </div>
           <div className='images w-[100%] self-center lg:w-[40%] xl:w-[50%]  lg:mb-[100px] block lg:hidden'>
