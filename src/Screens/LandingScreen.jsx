@@ -16,6 +16,7 @@ import Steps from '../Components/Shared/Steps'
 import { ReasonsData } from '../Static/ReasonsData'
 import { stepperData } from '../Static/StepperData'
 import QASection from '../Components/Shared/QASection'
+import FormSection from '../Components/Shared/FormSection'
 
 const LandingScreen = () => {
   return (
@@ -185,7 +186,7 @@ const LandingScreen = () => {
       {/* end - TOUR Section */}
 
       {/* START - FAQ Section */}
-      <QASection/>
+      <QASection />
       {/* END - FAQ Section */}
 
       {/* START - Blog Section */}
@@ -217,48 +218,14 @@ const LandingScreen = () => {
       {/* END - Blog Section */}
 
       {/* START - Form Section */}
-      <section className='form-section px-[16px] '>
-        <div className='form-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain  '>
-          <div className='form--inner  flex flex-col gap-[24px] py-[30px] md:py-[60px] px-[30px] md:px-[50px] bg-[#5183F4] text-white rounded-[30px]'>
-            <div className='title [font-family:var(--font-jakarta)] font-extrabold text-[28px] md:text-3xl xl:text-5xl'>
-              Download the FREE Japanese PDF Resources
-            </div>
-            <div className='desc [font-family:var(--font-league)] text-xl font-normal '>
-              Write your name and email address below and access to your free PDF worksheet! Once you complete the form
-              on the page and submit it, you will receive an email from us with the links to the PDF files. Please also
-              check your spam or junk folder if you don't see the email in your inbox.
-            </div>
-            <div className='form flex flex-col gap-[24px]'>
-              <div className='flex w-full gap-[24px] flex-col lg:flex-row'>
-                <CustomInput
-                  className='w-full lg:w-[50%]'
-                  inputClassName={'border-[#5183F4]! bg-white'}
-                  placeholder={'First Name'}
-                  leftIcon={'/form-person.svg'}
-                />
-                <CustomInput
-                  className='w-full  lg:w-[50%]'
-                  inputClassName={'border-[#5183F4]! bg-white'}
-                  placeholder={'Last Name'}
-                  leftIcon={'/form-person.svg'}
-                />
-              </div>
-              <div className='flex flex-col lg:flex-row gap-[24px]'>
-                <CustomInput
-                  className='basis-full lg:basis-[80%]'
-                  inputClassName={'border-[#5183F4]! bg-white'}
-                  placeholder={'Email'}
-                  leftIcon={'/mail.svg'}
-                />
-                <CustomButton
-                  text={'Submit'}
-                  className='bg-white! text-[#5183F4]! basis-full lg:basis-[20%] rounded-[50px] font-medium text-base! py-[15px] px-[23px]'
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FormSection
+        inputs={true}
+        title={'Download the FREE Japanese PDF Resources'}
+        desc={
+          'Write your name and email address below and access to your free PDF worksheet! Once you complete the form    on the page and submit it, you will receive an email from us with the links to the PDF files. Please also check your spam or junk folder if you dont see the email in your inbox.'
+        }
+        btnText={'Submit'}
+      />
       {/* END - Form Section */}
       <Footer />
     </>

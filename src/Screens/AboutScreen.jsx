@@ -41,7 +41,7 @@ const AboutScreen = () => {
         </div>
       </section>
       {/* END - Learning Section */}
-      <Testimonials heading={'Student Testimonials.'} data={TestimonialData}/>
+      <Testimonials heading={'Student Testimonials.'} data={TestimonialData} />
       <Tour
         desc={
           'Unlock Your Language Potential with Nihongo Talkers Discover Your Perfect Tutor Today and Speak with Confidence'
