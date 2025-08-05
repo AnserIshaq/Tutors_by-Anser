@@ -3,6 +3,8 @@ import BecomeTutorStep1 from '../Shared/BecomeTutorStep1'
 import { CustomButton } from './CustomButton'
 import StepBar from '../Shared/StepBar'
 import StepCircularBar from '../Shared/StepCircularBar'
+import BecomeTutorStep2 from '../Shared/BecomeTutorStep2'
+import BecomeTutorStep3 from '../Shared/BecomeTutorStep3'
 
 const stepLabels = [
   '1. 個人情報',
@@ -12,7 +14,7 @@ const stepLabels = [
   '5. レッスンエリア＆日程',
   '6. 連絡先',
 ]
-const stepComponents = [<BecomeTutorStep1 />, <BecomeTutorStep1 />, <BecomeTutorStep1 />]
+const stepComponents = [<BecomeTutorStep1 />, <BecomeTutorStep2 />, <BecomeTutorStep3 />]
 
 const CustomSteps = () => {
   const [currentStep, setCurrentStep] = useState(0)
@@ -32,14 +34,13 @@ const CustomSteps = () => {
   return (
     <>
       <div className='px-[16px] lg:px-0'>
-
         {/* step bars large screens */}
         <div className='lg:mb-[60px]'>
           <div className='hidden lg:flex justify-between'>
             <StepBar stepLabels={stepLabels} currentStep={currentStep} />
           </div>
         </div>
-        
+
         {/* step bars small screens */}
         <div className='flex justify-between lg:hidden flex-row items-center gap-6 lg:mt-8'>
           <StepCircularBar stepLabels={stepLabels} currentStep={currentStep} />
@@ -63,7 +64,7 @@ const CustomSteps = () => {
               {currentStep < stepLabels.length - 1 ? (
                 <CustomButton
                   onClick={next}
-                  className='h-[54px]! md:w-[150px]! rounded-[50px] py-[17px] px-[38px]'
+                  className='h-[54px]! w-[150px]! rounded-[50px] py-[17px] px-[38px]'
                   text={'次'}
                 />
               ) : (
@@ -71,7 +72,7 @@ const CustomSteps = () => {
                   onClick={() => {
                     alert('done step 1')
                   }}
-                  className='h-[54px]! md:w-[150px]! rounded-[50px] py-[17px] px-[38px]'
+                  className='h-[54px]! w-[150px]! rounded-[50px] py-[17px] px-[38px]'
                   text={'Done'}
                 />
               )}

@@ -9,6 +9,7 @@ const CustomInput = ({
   inputClassName = '',
   leftIconClassName = '',
   rightIconClassName = '',
+  disabled = false,
   ...props
 }) => {
   return (
@@ -18,6 +19,7 @@ const CustomInput = ({
       )}
       <input
         type={type}
+        disabled={disabled}
         placeholder={placeholder}
         onChange={onChange}
         className={`common-inputs w-full border border-black rounded-[10px] [font-family:var(--font-league)] py-[16px] text-base sm:text-xl font-normal text-[#181A20] focus-visible:outline-none focus-visible:border-[#5183F4] placeholder:text-[#B1B1B1] ${
