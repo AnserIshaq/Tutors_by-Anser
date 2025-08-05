@@ -100,7 +100,6 @@ p {
   @apply overflow-hidden;
 }
 
-
 .ant-dropdown-menu-submenu-title-active {
   @apply bg-[#EBF5FE];
 }
@@ -120,7 +119,6 @@ p {
 :where(.css-dev-only-do-not-override-7t2xvq).ant-divider {
   @apply text-[#B1B1B1];
 }
-
 
 :where(.css-dev-only-do-not-override-7t2xvq).ant-divider-horizontal {
   @apply my-[12px]!;
@@ -160,7 +158,7 @@ p {
 }
 .custom-faq-collapse > .ant-collapse-item > .ant-collapse-header {
   @apply lg:h-[66px] bg-[#EBF5FE] flex flex-row-reverse justify-between items-center font-medium
-    text-base md:text-xl xl:text-3xl text-[#181A20] rounded-[10px]! p-[15px]
+    text-base md:text-xl xl:text-3xl text-[#181A20] rounded-[10px]! p-[15px];
 }
 .custom-faq-collapse > .ant-collapse-item:last-child > .ant-collapse-content {
   @apply border-none;
@@ -201,20 +199,23 @@ p {
   @apply left-[50%]! w-[70px]! overflow-hidden;
 }
 
+/* ANT design override */
+/* :where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:first-child {
+  @apply rounded-[10px]!;
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:last-child {
+  @apply rounded-[10px]!;
+} */
+.ant-radio-button-wrapper{
+  @apply h-[90px] w-full md:w-[114px] py-[14px] px-[10px] border-[2px] rounded-[10px]! border-l-[2px] border-white
+}
+.ant-radio-button-label{
+  @apply flex flex-col justify-center items-center 
+}
 
-/* custom steps section */
-:where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-title::after{
-  @apply h-[15px]! rounded-[50px]
-}
-:where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item{
-  @apply flex-1!
-}
-:where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-icon{
+:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:not(:first-child)::before{
   @apply hidden
 }
-/* :where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title{
-  @apply 
-} */
-/* :where(.css-dev-only-do-not-override-7t2xvq).ant-steps .ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title{
-  @apply 
-} */
+:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-group{
+  @apply flex gap-[24px] flex-col md:flex-row
+}
