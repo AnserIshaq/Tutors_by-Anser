@@ -199,23 +199,30 @@ p {
   @apply left-[50%]! w-[70px]! overflow-hidden;
 }
 
-/* ANT design override */
-/* :where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:first-child {
-  @apply rounded-[10px]!;
+/* ANT design radio override */
+
+.ant-radio-button-wrapper {
+  @apply h-[90px] w-full md:w-[114px] py-[14px] px-[10px] border-[2px] rounded-[10px]! border-l-[2px] border-white;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:last-child {
-  @apply rounded-[10px]!;
-} */
-.ant-radio-button-wrapper{
-  @apply h-[90px] w-full md:w-[114px] py-[14px] px-[10px] border-[2px] rounded-[10px]! border-l-[2px] border-white
-}
-.ant-radio-button-label{
-  @apply flex flex-col justify-center items-center 
+.ant-radio-button-label {
+  @apply flex flex-col justify-center items-center;
 }
 
-:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:not(:first-child)::before{
-  @apply hidden
+:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-button-wrapper:not(:first-child)::before {
+  @apply hidden;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-group{
-  @apply flex gap-[24px] flex-col md:flex-row
+:where(.css-dev-only-do-not-override-7t2xvq).ant-radio-group {
+  @apply flex gap-[24px] flex-col md:flex-row;
+}
+
+/* ANT design checkbox override */
+.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled) .ant-checkbox-inner,
+.ant-checkbox:not(.ant-checkbox-disabled) .ant-checkbox-inner {
+  @apply border-[#5183F4];
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-checkbox .ant-checkbox-inner {
+  @apply bg-[#EBF5FE];
+}
+.ant-checkbox-checked .ant-checkbox-inner{
+  @apply bg-[#5183F4];
 }

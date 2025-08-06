@@ -1,32 +1,18 @@
-import React, { useRef } from 'react'
-import CustomInput from '../ui/CustomInput'
-import CustomRadio from '../ui/CustomRadio'
-import CustomSelect from '../ui/CustomSelect'
+import React from 'react'
+import CustomInput from '../../Components/ui/CustomInput'
+import CustomRadio from '../../Components/ui/CustomRadio'
+import CustomSelect from '../../Components/ui/CustomSelect'
 import { selectOptions } from '../../Static/SelectOptions'
+import UploadProfile from '../../Components/Shared/UploadProfile'
 
 const BecomeTutorStep1 = () => {
-  const fileInputRef = useRef(null)
 
-  const handleImageClick = () => {
-    fileInputRef.current.click() // trigger hidden input
-  }
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0]
-    if (file) {
-      console.log('Selected file:', file)
-      // You can preview or upload the file here
-    }
-  }
   return (
     <>
       <h1 className='text-[#5183F4] mb-[50px] text-center'>個人情報</h1>
       <div className='profile flex flex-col'>
         <p className='text-[22px] text-[#181A20] font-medium mb-[10px]'>写真</p>
-        <div className='profile-section self-center justify-self-center'>
-          <img src='/fileUpload.svg' alt='' onClick={handleImageClick} className='cursor-pointer' />
-          <input type='file' ref={fileInputRef} onChange={handleFileChange} accept='image/*' className='hidden' />
-        </div>
+        <UploadProfile/>
       </div>
       <div className='flex flex-col gap-[30px]'>
         <div className='inputs flex flex-col'>

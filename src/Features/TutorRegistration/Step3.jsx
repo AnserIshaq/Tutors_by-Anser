@@ -1,5 +1,5 @@
-import CustomCheckBox from '../ui/CustomCheckBox'
-import CustomInput from '../ui/CustomInput'
+import CustomCheckBox from '../../Components/ui/CustomCheckBox'
+import CustomInput from '../../Components/ui/CustomInput'
 
 const BecomeTutorStep3 = () => {
   return (
@@ -15,8 +15,8 @@ const BecomeTutorStep3 = () => {
         </div>
         <div className='inputs flex flex-col'>
           <div className='flex flex-col md:flex-row gap-[30px]'>
-            <CustomCheckBox text={'体験レッスン (60分/生徒)'} />
-            <CustomCheckBox text={'グループレッスン (60分/生徒)'}/>
+            <CustomCheckBox text={'体験レッスン (60分/生徒)'} className={' font-medium'} />
+            <CustomCheckBox text={'グループレッスン (60分/生徒)'} className={' font-medium'}/>
           </div>
         </div>
         <div className='inputs flex flex-col'>

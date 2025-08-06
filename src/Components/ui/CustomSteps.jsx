@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import BecomeTutorStep1 from '../Shared/BecomeTutorStep1'
+import BecomeTutorStep1 from '../../Features/TutorRegistration/Step1'
 import { CustomButton } from './CustomButton'
 import StepBar from '../Shared/StepBar'
 import StepCircularBar from '../Shared/StepCircularBar'
-import BecomeTutorStep2 from '../Shared/BecomeTutorStep2'
-import BecomeTutorStep3 from '../Shared/BecomeTutorStep3'
+import BecomeTutorStep2 from '../../Features/TutorRegistration/Step2'
+import BecomeTutorStep3 from '../../Features/TutorRegistration/Step3'
+import BecomeTutorStep4 from '../../Features/TutorRegistration/Step4'
+import BecomeTutorStep5 from '../../Features/TutorRegistration/Step5'
+import BecomeTutorStep6 from '../../Features/TutorRegistration/Step6'
 
 const stepLabels = [
   '1. 個人情報',
@@ -14,7 +17,14 @@ const stepLabels = [
   '5. レッスンエリア＆日程',
   '6. 連絡先',
 ]
-const stepComponents = [<BecomeTutorStep1 />, <BecomeTutorStep2 />, <BecomeTutorStep3 />]
+const stepComponents = [
+  <BecomeTutorStep1 />,
+  <BecomeTutorStep2 />,
+  <BecomeTutorStep3 />,
+  <BecomeTutorStep4 />,
+  <BecomeTutorStep5 />,
+  <BecomeTutorStep6 />,
+]
 
 const CustomSteps = () => {
   const [currentStep, setCurrentStep] = useState(0)
@@ -54,7 +64,7 @@ const CustomSteps = () => {
               {currentStep > 0 ? (
                 <CustomButton
                   onClick={prev}
-                  className='h-[54px]! md:w-[150px]! rounded-[50px] py-[17px] px-[38px] bg-[#EBF5FE] border border-[#5183F4]! text-[#5183F4]!'
+                  className='h-[54px]! w-[150px]! rounded-[50px] py-[17px] px-[38px] bg-[#EBF5FE] border border-[#5183F4]! text-[#5183F4]!'
                   text={'戻る'}
                 />
               ) : (

@@ -6,13 +6,13 @@ const StepCircularBar = ({currentStep, stepLabels}) => {
       {/* Circular Progress */}
       <div className='relative w-[120px] h-[120px]'>
         <svg className='w-[120px] h-[120px] rotate-[-90deg]'>
-          <circle cx='60' cy='60' r='54' stroke='#EBF5FE' strokeWidth='6' fill='none' />
+          <circle cx='60' cy='60' r='54' stroke='#EBF5FE' strokeWidth='10' fill='none' />
           <circle
             cx='60'
             cy='60'
             r='54'
             stroke='#5183F4'
-            strokeWidth='6'
+            strokeWidth='10'
             fill='none'
             strokeDasharray={2 * Math.PI * 54}
             strokeDashoffset={2 * Math.PI * 54 * (1 - (currentStep + 1) / stepLabels.length)}
@@ -21,7 +21,7 @@ const StepCircularBar = ({currentStep, stepLabels}) => {
           />
         </svg>
 
-        <div className='absolute inset-0 flex items-center justify-center text-[14px] font-semibold text-[#5183F4]'>
+        <div className='absolute inset-0 flex items-center justify-center text-xl font-semibold text-[#5183F4]'>
           Step
           <br />
           {currentStep + 1} of {stepLabels.length}
@@ -30,9 +30,9 @@ const StepCircularBar = ({currentStep, stepLabels}) => {
 
       {/* Descriptions */}
       <div className='flex flex-col'>
-        <div className='text-xl font-semibold text-[#181A20] mb-1'>{stepLabels[currentStep]}</div>
+        <p className='text-xl font-semibold text-[#181A20] mb-1'>{stepLabels[currentStep]}</p>
         {stepLabels[currentStep + 1] && (
-          <div className='text-[14px] font-normal text-[#B1B1B1]'>{stepLabels[currentStep + 1]}</div>
+          <p className='text-[14px] font-normal text-[#B1B1B1]'>{stepLabels[currentStep + 1]}</p>
         )}
       </div>
     </>

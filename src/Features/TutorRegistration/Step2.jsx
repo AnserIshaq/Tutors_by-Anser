@@ -1,7 +1,7 @@
 import React from 'react'
 import { selectOptions } from '../../Static/SelectOptions'
-import CustomSelect from '../ui/CustomSelect'
-import CustomInput from '../ui/CustomInput'
+import CustomSelect from '../../Components/ui/CustomSelect'
+import CustomInput from '../../Components/ui/CustomInput'
 const BecomeTutorStep2 = () => {
   return (
     <>
