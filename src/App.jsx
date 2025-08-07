@@ -14,6 +14,7 @@ import FAQScreen from './Screens/FAQScreen'
 import TutorSignupScreen from './Screens/TutorSignupScreen'
 import Layout from './Layout/Layout'
 import PricingScreen from './Screens/PricingScreen'
+import CartScreen from './Screens/CartScreen'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/faq' element={<FAQScreen />} />
             <Route path='/tutor-signup' element={<TutorSignupScreen />} />
             <Route path='/pricing' element={<PricingScreen />} />
+            <Route path='/cart' element={<CartScreen />} />
           </Route>
 
           <Route path='/login' element={<LoginScreen />} />
