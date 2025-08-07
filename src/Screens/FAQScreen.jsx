@@ -7,7 +7,6 @@ import CustomCollapse from '../Components/ui/CustomCollapse'
 const FAQScreen = () => {
   return (
     <>
-      <TopBar />
       <FormSection
         inputs={false}
         title={'Frequently Asked Questions  '}
@@ -33,7 +32,6 @@ const FAQScreen = () => {
           />
         </div>
       </section>
-      <Footer />
     </>
   )
 }

@@ -6,7 +6,6 @@ import CustomSteps from '../Components/ui/CustomSteps'
 const TutorSignupScreen = () => {
   return (
     <>
-      <TopBar />
       <section>
         <div className='py-[25px] md:py-[60px] px-0 sm:px-[24px] lg:px-[60px] contain'>
           <div>
@@ -14,7 +13,6 @@ const TutorSignupScreen = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   )
 }

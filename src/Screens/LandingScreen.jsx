@@ -19,7 +19,6 @@ import FormSection from '../Components/Shared/FormSection'
 const LandingScreen = () => {
   return (
     <>
-      <TopBar />
       {/* START - Hero Section */}
       <section className='hero-section pb-[15px] lg:pb-[60px]'>
         <div className='hero contain px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px]'>
@@ -226,7 +225,6 @@ const LandingScreen = () => {
         btnText={'Submit'}
       />
       {/* END - Form Section */}
-      <Footer />
     </>
   )
 }

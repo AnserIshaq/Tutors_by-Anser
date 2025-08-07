@@ -12,17 +12,21 @@ import BecomeTutorScreen from './Screens/BecomeTutorScreen'
 import ContactUsScreen from './Screens/ContactUsScreen'
 import FAQScreen from './Screens/FAQScreen'
 import TutorSignupScreen from './Screens/TutorSignupScreen'
+import Layout from './Layout/Layout'
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<LandingScreen />} />
-          <Route path='/about-us' element={<AboutScreen />} />
-          <Route path='/become-tutor' element={<BecomeTutorScreen />} />
-          <Route path='/contact-us' element={<ContactUsScreen />} />
-          <Route path='/faq' element={<FAQScreen />} />
-          <Route path='/tutor-signup' element={<TutorSignupScreen />} />
+          <Route element={<Layout />}>
+            <Route path='/' element={<LandingScreen />} />
+            <Route path='/about-us' element={<AboutScreen />} />
+            <Route path='/become-tutor' element={<BecomeTutorScreen />} />
+            <Route path='/contact-us' element={<ContactUsScreen />} />
+            <Route path='/faq' element={<FAQScreen />} />
+            <Route path='/tutor-signup' element={<TutorSignupScreen />} />
+          </Route>
           <Route path='/login' element={<LoginScreen />} />
           <Route path='/forgot-password' element={<FotgotScreen />} />
           <Route path='/signup-step-1' element={<SignupScreen />} />

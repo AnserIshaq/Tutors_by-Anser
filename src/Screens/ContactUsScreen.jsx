@@ -8,7 +8,6 @@ import CustomTextArea from '../Components/ui/CustomTextArea'
 const ContactUsScreen = () => {
   return (
     <>
-      <TopBar />
       {/* START - Contact hero section */}
       <section>
         <div className='contain px-4 sm:px-[24px] md:px-[60px] py-[60px]'>
@@ -79,7 +78,6 @@ const ContactUsScreen = () => {
         }
         btnText={'Register Now'}
       />
-      <Footer />
     </>
   )
 }

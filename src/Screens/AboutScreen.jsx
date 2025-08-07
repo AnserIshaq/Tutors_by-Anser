@@ -9,7 +9,6 @@ import { TestimonialData } from '../Static/TestimonialData'
 const AboutScreen = () => {
   return (
     <>
-      <TopBar />
       <section className='hero-section about-bg-main '>
         <h1 className='text-white flex h-full w-full justify-center items-center'>About Us</h1>
       </section>
@@ -50,7 +49,6 @@ const AboutScreen = () => {
         descClass={'font-extrabold text-xl md:text-3xl lg:text-4xl w-[90%] md:w-[60%]'}
         bgImage={'/tutor-bg.jpg'}
       />
-      <Footer />
     </>
   )
 }

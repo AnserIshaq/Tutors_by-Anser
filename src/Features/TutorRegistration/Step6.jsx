@@ -58,6 +58,7 @@ const BecomeTutorStep6 = () => {
             <CustomTextArea
               className={'w-full border-none bg-white p-[15px] h-[130px]'}
               inputClassName={'bg-white border-none w-full!'}
+              placeholder={''}
             />
           </div>
         </div>
@@ -67,6 +68,7 @@ const BecomeTutorStep6 = () => {
             <CustomTextArea
               className={'w-full border-none bg-white p-[15px] h-[130px]'}
               inputClassName={'bg-white border-none w-full!'}
+              placeholder={''}
             />
           </div>
         </div>

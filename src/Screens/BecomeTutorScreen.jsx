@@ -14,7 +14,6 @@ import { tutorFaqData } from '../Static/FAQData'
 const BecomeTutorScreen = () => {
   return (
     <>
-      <TopBar />
       {/* START - Hero Section */}
       <section>
         <div className='become-tutor-bg-main'>
@@ -109,7 +108,6 @@ const BecomeTutorScreen = () => {
       </section>
       <Testimonials heading={'​日本語講師の声・体験談'} data={TestimonialData2} />
 
-      <Footer />
     </>
   )
 }
