@@ -15,7 +15,7 @@ h1 {
 }
 
 h2 {
-  @apply [font-family:var(--font-jakarta)] font-extrabold text-4xl lg:text-5xl;
+  @apply [font-family:var(--font-jakarta)] font-extrabold text-2xl lg:text-4xl;
 }
 
 p {

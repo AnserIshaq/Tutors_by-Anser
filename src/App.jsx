@@ -13,6 +13,7 @@ import ContactUsScreen from './Screens/ContactUsScreen'
 import FAQScreen from './Screens/FAQScreen'
 import TutorSignupScreen from './Screens/TutorSignupScreen'
 import Layout from './Layout/Layout'
+import PricingScreen from './Screens/PricingScreen'
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
             <Route path='/contact-us' element={<ContactUsScreen />} />
             <Route path='/faq' element={<FAQScreen />} />
             <Route path='/tutor-signup' element={<TutorSignupScreen />} />
+            <Route path='/pricing' element={<PricingScreen />} />
           </Route>
+
           <Route path='/login' element={<LoginScreen />} />
           <Route path='/forgot-password' element={<FotgotScreen />} />
           <Route path='/signup-step-1' element={<SignupScreen />} />
