@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react'
 
-const UploadProfile = () => {
+const UploadProfile = ({ wrapperClass, currentImage = '', imageClass, profileFrame = false, profileFrameImage }) => {
   const fileInputRef = useRef(null)
-  const [imageUrl, setImageUrl] = useState('')
+  const [imageUrl, setImageUrl] = useState(currentImage)
+  const profileFrameCircle = profileFrame && profileFrameImage
   const baseClass = imageUrl === '/demoProfile.svg' ? 'top-[13%] absolute' : 'object-cover'
   const handleImageClick = () => {
     fileInputRef.current.click()
@@ -17,13 +18,14 @@ const UploadProfile = () => {
   }
 
   return (
-    <div className='profile-section self-center justify-self-center relative overflow-hidden flex justify-center items-center w-[150px] h-[150px] mb-[30px]'>
+    <div
+      className={`profile-section self-center justify-self-center relative overflow-hidden flex justify-center items-center ${wrapperClass}`}>
       {/* Outer frame image */}
       <img
-        src={imageUrl === '' ? 'fileUpload.svg' : '/profileFrame.svg'}
+        src={imageUrl === '' ? 'fileUpload.svg' : profileFrameCircle}
         alt='profile frame'
         onClick={handleImageClick}
-        className='cursor-pointer absolute w-full h-full'
+        className={`cursor-pointer absolute w-full h-full`}
       />
 
       {/* User uploaded image */}
@@ -32,7 +34,7 @@ const UploadProfile = () => {
           src={imageUrl}
           alt='profile'
           onClick={handleImageClick}
-          className={`cursor-pointer rounded-full w-[80%] h-[80%] z-10 ${baseClass}`}
+          className={`cursor-pointer rounded-full ${imageClass} z-10 ${baseClass}`}
         />
       )}
 

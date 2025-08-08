@@ -6,13 +6,17 @@ import { selectOptions } from '../../Static/SelectOptions'
 import UploadProfile from '../../Components/Shared/UploadProfile'
 
 const BecomeTutorStep1 = () => {
-
   return (
     <>
       <h1 className='text-[#5183F4] mb-[50px] text-center'>個人情報</h1>
       <div className='profile flex flex-col'>
         <p className='text-[22px] text-[#181A20] font-medium mb-[10px]'>写真</p>
-        <UploadProfile/>
+        <UploadProfile
+          wrapperClass={'w-[150px] h-[150px] mb-[30px]'}
+          imageClass={'w-[80%] h-[80%]'}
+          profileFrameImage={'/profileFrame.svg'}
+          profileFrame={true}
+        />
       </div>
       <div className='flex flex-col gap-[30px]'>
         <div className='inputs flex flex-col'>

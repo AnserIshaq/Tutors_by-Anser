@@ -33,7 +33,13 @@ const BecomeTutorStep5 = () => {
             <span>他の言語を追加する</span>
           </div>
         </div>
-        <TimeSlotGrid/>
+        <TimeSlotGrid
+          containerWidth={'w-full lg:w-[70%]'}
+          heading={true}
+          overflowClass={'sm:overflow-x-visible'}
+          slotGrid={'grid-cols-[125px_repeat(7,minmax(20px,1fr))] gap-[18px] md:gap-[24px]'}
+          checkboxGrid={'grid-cols-[125px_repeat(7,minmax(15px,1fr))]'}
+        />
         <div className='inputs flex flex-col'>
           <p className='text-[22px] text-[#181A20] font-medium mb-[10px]'>レッスンのタイミング</p>
           <div className='flex flex-col gap-[10px]'>

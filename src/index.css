@@ -226,3 +226,25 @@ p {
 .ant-checkbox-checked .ant-checkbox-inner{
   @apply bg-[#5183F4];
 }
+
+/* ANT design tab override */
+/* Main Segmented container */
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented {
+  @apply h-[68px] w-[482px] p-[10px] rounded-[100px] bg-[#5183F4] flex items-center transition-all duration-300;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-group {
+  @apply flex justify-center w-full;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item {
+  @apply flex items-center justify-center h-[48px] px-6 rounded-[100px] text-white transition-all duration-300 ease-in-out;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item-selected {
+  @apply bg-white text-[#5183F4] shadow-md;
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item-selected{
+  @apply w-[219px]
+}
