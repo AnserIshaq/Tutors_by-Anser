@@ -127,3 +127,14 @@ export const ContactCardData_INFO = [
     value: 'I am an artificial intelligence model called ChatGPT by OpenAI',
   },
 ]
+
+export const ProfileCardEditor = [
+  {
+    label:'メールアドレス:',
+    value:"Idenbrid@gmail.com"
+  },
+  {
+    label:'パスワード:',
+    value:"********"
+  },
+]
