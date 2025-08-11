@@ -5,7 +5,7 @@ const Testimonials = ({heading , data}) => {
   return (
     <section className='testimonial-section bg-[#F7F7F7]  mt-[15px] lg:mt-[60px]'>
       <div className='slider--inner contain px-0 py-[24px] md:py-[60px]'>
-        <div className='content flex flex-col gap-[16px] px-3 lg:pl-3 mb-[24px]'>
+        <div className='content flex flex-col gap-[16px] px-[15px] lg:pl-3 mb-[24px]'>
           <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl text-[#5183F4] text-center '>
             {heading}
           </div>

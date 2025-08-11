@@ -7,7 +7,7 @@ import { CustomButton, CustomButtonWithIcon } from './CustomButton'
 import { Link } from 'react-router'
 
 const CustomDrawer = ({ onCloseDrawer, openState }) => {
-  const [placement, setPlacement] = useState('left')
+  const [placement, _] = useState('left')
   const handleDropdownClick = (e) => {
     console.log('Dropdown item clicked:', e)
   }
@@ -41,7 +41,7 @@ const CustomDrawer = ({ onCloseDrawer, openState }) => {
               className='flex items-center gap-[15px] text-xl text-[#B1B1B1] font-normal [font-family:var(--font-league)] mb-6 '>
               {item.key} <span className='w-[20px] h-[1px] border border-[#B1B1B1] flex'></span>
               <Link to={item.link}>
-                <span className='font-medium text-2xl text-[#181A20]'>{item.label}</span>
+                <span className='font-medium text-[26px] text-[#181A20]'>{item.label}</span>
               </Link>
             </p>
           ))}
@@ -51,13 +51,13 @@ const CustomDrawer = ({ onCloseDrawer, openState }) => {
           <CustomButtonWithIcon
             text={'Cart'}
             onClick={() => console.log('prop passed')}
-            className='text-[#181A20]! rounded-[50px] border  px-[28px]! py-[12px]! mb-6'
+            className='text-[#181A20]! rounded-[50px] border  px-[28px]! py-[12px]! mb-6 text-base! font-medium!'
             icon='/bag.svg'
           />
           <CustomButton
             text={'日本語先生になる'}
             onClick={() => console.log('prop passed')}
-            className='rounded-[50px] border  px-[28px]! py-[12px]!'
+            className='rounded-[50px] border  px-[28px]! py-[12px]! text-base! font-medium!'
           />
         </div>
       </Drawer>

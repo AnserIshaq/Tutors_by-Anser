@@ -38,10 +38,10 @@ const CustomCard = ({ item, mode = 'profile' }) => {
           <>
             <p className='text-xl text-[#5183F4] font-semibold'>{item.name}</p>
             <p className='text-base text-[#B1B1B1] font-normal'>{item.location}</p>
-            <Divider />
+            <Divider className='my-[4px]!'/>
             <p className='text-base text-[#717171] font-semibold'>Languages:</p>
             <p className='text-base text-[#B1B1B1] font-normal'>{item.languages}</p>
-            <Divider />
+            <Divider className='my-[4px]!' />
             <div>
               <p className='text-base text-[#717171] font-semibold'>Fee Structure</p>
               {item.fee?.map((f, idx) => (

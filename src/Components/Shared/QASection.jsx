@@ -3,8 +3,8 @@ import CustomCollapse from '../ui/CustomCollapse'
 
 const QASection = () => {
   return (
-    <section className='reasons-section py-[15px] lg:py-[120px]'>
-      <div className='reason-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain '>
+    <section className='reasons-section py-[30px] lg:py-[120px]'>
+      <div className='reason-main px-0 sm:px-[24px] md:px-[60px] contain '>
         <div className='images w-full lg:w-[40%] xl:w-[40%]  mb-[100px] lg:mb-0 relative lg:absolute lg:right-0 hidden lg:block'>
           <img src='/faq.svg' alt='reasons' className=' z-2 absolute right-0' />
         </div>

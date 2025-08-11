@@ -25,13 +25,13 @@ const LandingScreen = () => {
           <div className='h-[406px] min-h-auto lg:min-h-[600px] bg-[#EBF5FE] rounded-[30px] relative mb-[200px] lg:mb-0'>
             <div className='content h-auto lg:h-[406px] min-h-auto lg:min-h-[600px] flex flex-row justify-between'>
               <div className='flex flex-col justify-between h-auto lg:h-[406px] min-h-auto lg:min-h-[600px] basis-[100%] lg:basis-[70%] shrink'>
-                <div className='hero-content flex flex-col gap-4 p-[15px] sm:p-[30px]'>
+                <div className='hero-content flex flex-col gap-4 px-[15px] py-[30px] sm:px-[30px]'>
                   <div className='top-content [font-family:var(--font-jakarta)] font-extrabold text-4xl md:text-5xl lg:text-6xl pt-[15px] lg:pt-[60px]'>
-                    <p className=''>Need a Tutor?</p>
-                    <p className=''>We can help.</p>
+                    <h1 className='text-[#181A20]'>Need a Tutor?</h1>
+                    <h1 className='text-[#181A20]'>We can help.</h1>
                   </div>
                   <div className='content-desc'>
-                    <p className='text-base lg:text-xl [font-family:var(--font-jakarta)] font-normal text-[#717171]'>
+                    <p className='text-xl [font-family:var(--font-jakarta)] font-normal text-[#717171]'>
                       Compare and find the best tutors to fit your needs.
                     </p>
                   </div>
@@ -127,8 +127,8 @@ const LandingScreen = () => {
       {/* START - Slider Section */}
       <section className='slider-section  my-[15px] lg:my-[60px]'>
         <div className='slider--inner contain px-0 sm:px-[24px] md:px-[60px]'>
-          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3 mb-[24px]'>
-            <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
+          <div className='content flex flex-col gap-[16px] px-[15px] lg:pl-3 mb-[24px]'>
+            <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl text-[#181A20]'>
               Meet the most qualified <span className='text-[#5183F4]'>Tutors.</span>
             </div>
             <div className='desc [font-family:var(--font-league)] text-base lg:text-xl font-normal text-[#717171] max-w-full lg:max-w-[70%]'>
@@ -151,13 +151,16 @@ const LandingScreen = () => {
       <section className='reasons-section py-[15px] lg:py-[120px] bg-[#F7F7F7]'>
         <div className='reason-main px-0 sm:px-[24px] md:px-[60px] my-[30px] lg:my-[60px] contain'>
           <div className='reason-inner flex justify-between flex-col lg:flex-row  px-[12px]'>
-            <div className='images w-full lg:w-[50%] relative mb-[100px] lg:mb-0 '>
-              <img src='/reason1.svg' alt='reasons' className='relative z-2 ' />
+            <div className='images w-full lg:w-[50%] relative mb-[100px] lg:mb-0 hidden lg:block'>
+              <img src='/reason1.svg' alt='reasons' className='relative z-2 w-[85%]  xl:w-auto' />
               <img src='/Rblob.svg' alt='blob' className='absolute top-[-48px] left-[-67px] z-1' />
               <img src='/RDots.svg' alt='dots' className='absolute top-[-85px] lg:left-[-40px] z-1' />
-              <img src='/RDots.svg' alt='dots' className='absolute bottom-[-20%] right-[45%] z-3' />
-              <img src='/reason1.1.svg' alt='frame' className='absolute bottom-[-20%] right-0 lg:right-[23%] z-3' />
-              <img src='/reason1.2.svg' alt='frame' className='absolute top-[-120px] right-0 lg:right-[12%] z-3' />
+              <img src='/RDots.svg' alt='dots' className='absolute bottom-[-5%] xl:bottom-[-20%] right-[30%] z-3' />
+              <img src='/reason1.1.svg' alt='frame' className='absolute bottom-[-5%] xl:bottom-[-20%] right-0 xl:right-[30px] z-3' />
+              <img src='/reason1.2.svg' alt='frame' className='absolute top-[-120px] right-0 lg:right-[-30px] z-3' />
+            </div>
+            <div className='images w-full lg:w-[50%] relative mb-[16px] lg:mb-0 block lg:hidden '>
+              <img src='/reason-02.svg' alt='reasons' className='relative z-2 w-full' />
             </div>
             <div className='content [font-family:var(--font-jakarta)] w-full lg:w-[50%] flex flex-col gap-[16px]'>
               <div className='title font-extrabold text-3xl md:text-4xl lg:text-5xl max-w-full lg:max-w-[100%] 2xl:max-w-[80%]'>
@@ -189,7 +192,7 @@ const LandingScreen = () => {
       {/* START - Blog Section */}
       <section className='blog-section  my-[15px] lg:my-[60px] hidden lg:block'>
         <div className='blog--inner contain px-0 sm:px-[24px] md:px-[60px]'>
-          <div className='content flex flex-col gap-[16px] px-3 lg:pl-3 mb-[24px]'>
+          <div className='content flex flex-col gap-[16px] px-[15px] lg:pl-3 mb-[24px]'>
             <div className='title [font-family:var(--font-jakarta)] font-extrabold text-3xl md:text-4xl lg:text-5xl '>
               From Our <span className='text-[#5183F4]'>Blog</span>
             </div>

@@ -29,16 +29,16 @@ const TopBar = () => {
         </div>
         <div className='middle hidden lg:block'>
           <ul className='flex rounded-r-[50px] rounded-l-[50px] border-[1px] border-[#B1B1B1] [font-family:var(--font-league)] font-normal text-base overflow-hidden'>
-            <li className='py-[10px] px-[10px] xl:px-[20px]  border-r border-[#B1B1B1] cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] '>
+            <li className='py-[10px] px-[10px]  border-r border-[#B1B1B1] cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] w-[110px] text-center'>
               Find Tutors
             </li>
-            <li className='py-[10px] px-[10px] xl:px-[20px]  border-r border-[#B1B1B1] cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] '>
+            <li className='py-[10px] px-[10px]  border-r border-[#B1B1B1] cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] w-[110px] text-center'>
               How It Works
             </li>
-            <li className='py-[10px] px-[10px] xl:px-[20px]  border-r border-[#B1B1B1] cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] '>
+            <li className='py-[10px] px-[10px]  border-r border-[#B1B1B1] cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] w-[110px] text-center'>
               Pricing
             </li>
-            <li className='py-[10px] px-[10px] xl:px-[20px]  cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] '>
+            <li className='py-[10px] px-[10px]  cursor-pointer hover:bg-[#5193F4] hover:text-[#ffffff] w-[110px] text-center'>
               FAQ
             </li>
           </ul>
@@ -49,7 +49,7 @@ const TopBar = () => {
           <CustomButton
             text='日本語先生になる'
             onClick={() => console.log('Log In clicked')}
-            className='lg:px-[15px] xl:px-[23px] py-[15px] h-[50px]! rounded-[50px] hidden lg:block'
+            className='lg:px-[15px] xl:px-[23px] py-[15px] h-[50px]! rounded-[50px] hidden lg:block text-base! font-medium!'
           />
         </div>
       </div>
