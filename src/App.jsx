@@ -16,6 +16,7 @@ import Layout from './Layout/Layout'
 import PricingScreen from './Screens/PricingScreen'
 import CartScreen from './Screens/CartScreen'
 import TutorDashboardScreen from './Screens/Dashboard/TutorDashboardScreen'
+import StudentDashboardScreen from './Screens/Dashboard/StudentDashboard'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path='/pricing' element={<PricingScreen />} />
             <Route path='/cart' element={<CartScreen />} />
             <Route path='/tutor-dashboard' element={<TutorDashboardScreen />} />
+            <Route path='/student-dashboard' element={<StudentDashboardScreen />} />
           </Route>
 
           <Route path='/login' element={<LoginScreen />} />

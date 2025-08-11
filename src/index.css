@@ -223,7 +223,7 @@ p {
 :where(.css-dev-only-do-not-override-7t2xvq).ant-checkbox .ant-checkbox-inner {
   @apply bg-[#EBF5FE];
 }
-.ant-checkbox-checked .ant-checkbox-inner{
+.ant-checkbox-checked .ant-checkbox-inner {
   @apply bg-[#5183F4];
 }
 
@@ -245,15 +245,16 @@ p {
   @apply bg-white text-[#717171] shadow-md;
 }
 
-:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item-selected{
-  @apply md:w-[219px]
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item-selected {
+  @apply md:w-[219px];
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item::after{
-  @apply rounded-[100px]
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item::after {
+  @apply rounded-[100px];
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-group{
-  @apply justify-between! w-full!
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-group {
+  @apply justify-between! w-full!;
 }
-:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item:hover:not(.ant-segmented-item-selected):not(.ant-segmented-item-disabled){
-  @apply text-white
+:where(.css-dev-only-do-not-override-7t2xvq).ant-segmented
+  .ant-segmented-item:hover:not(.ant-segmented-item-selected):not(.ant-segmented-item-disabled) {
+  @apply text-white;
 }

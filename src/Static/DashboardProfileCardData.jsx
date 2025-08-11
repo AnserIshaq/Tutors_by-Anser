@@ -130,11 +130,45 @@ export const ContactCardData_INFO = [
 
 export const ProfileCardEditor = [
   {
-    label:'メールアドレス:',
-    value:"Idenbrid@gmail.com"
+    label: 'メールアドレス:',
+    value: 'Idenbrid@gmail.com',
   },
   {
-    label:'パスワード:',
-    value:"********"
+    label: 'パスワード:',
+    value: '********',
+  },
+]
+
+export const ProfileCardEditor2 = [
+  {
+    label: 'Email:',
+    value: 'Idenbrid@gmail.com',
+  },
+  {
+    label: 'Password:',
+    value: '********',
+  },
+]
+
+export const StudentCardData_INFO = [
+  {
+    label: 'First Name:',
+    value: 'Hamza',
+  },
+  {
+    label: 'Last Name:',
+    value: 'Ashfaq',
+  },
+  {
+    label: 'Area:',
+    value: 'Tokyo',
+  },
+  {
+    label: 'Street Address:',
+    value: 'DHA Lahore',
+  },
+  {
+    label: 'Phone No:',
+    value: '123-1234-1234',
   },
 ]

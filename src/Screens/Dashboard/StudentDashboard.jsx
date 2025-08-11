@@ -2,26 +2,27 @@ import React, { useState } from 'react'
 import CustomTab from '../../Components/ui/CustomTab'
 import TutorProfile from '../../Features/DashboardProfile/TutorProfile'
 import TutorEditor from '../../Features/DashboardProfile/TutorEditor'
-import { tutorTabsOptions } from '../../Static/TabOptions'
+import { studentTabsOptions } from '../../Static/TabOptions'
+import StudentProfile from '../../Features/DashboardProfile/StudentEditor'
 
-const TutorDashboardScreen = () => {
-  const [activeTab, setActiveTab] = useState('Tutor Profile')
+const StudentDashboardScreen = () => {
+  const [activeTab, setActiveTab] = useState('Purchased History')
 
   return (
     <section>
       <div className='contain sm:px-[24px] md:px-[60px] py-[30px] md:py-[60px]'>
         <div className='flex justify-center'>
           <CustomTab
-            options={tutorTabsOptions}
-            storageKey='tutorDashboardTab'
-            defaultValue='Tutor Profile'
+            options={studentTabsOptions}
+            storageKey='studentDashboardTab'
+            defaultValue='Purchased History'
             onChange={setActiveTab}
           />
         </div>
-        {activeTab === 'Tutor Profile' ? <TutorProfile /> : <TutorEditor />}
+        {activeTab === 'Purchased History' ? <StudentProfile /> : <StudentProfile />}
       </div>
     </section>
   )
 }
 
-export default TutorDashboardScreen
+export default StudentDashboardScreen
