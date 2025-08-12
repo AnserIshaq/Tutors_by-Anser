@@ -91,14 +91,29 @@ const CustomTable = () => {
 
   return (
     <>
-      <Table
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-        rowClassName={(_, index) => (index % 2 === 0 ? 'bg-gray-50' : 'bg-white')}
-        scroll={{ x: 'max-content' }}
-      />
-      <CustomModal modal2Open={modal2Open} setModal2Open={setModal2Open} />
+      <div className='flex flex-col justify-between gap-[24px] w-full'>
+        <div className='flex flex-col lg:flex-row text-lg lg:text-[22px] font-medium text-[#181A20] gap-[10px] lg:gap-[24px]'>
+          <p className='flex gap-[24px]'>
+            Application No:<span className='text-[#B1B1B1]'>123456</span>
+          </p>
+          <div className='w-[1px] h-[32px] bg-black rotate-90 lg:rotate-0'></div>
+          <p className='flex gap-[24px]'>
+            Amount:<span className='text-[#B1B1B1]'>$8</span>
+          </p>
+          <div className='w-[1px] h-[32px] bg-black rotate-90 lg:rotate-0'></div>
+          <p className='flex gap-[24px]'>
+            Date:<span className='text-[#B1B1B1]'>04-04-2025</span>
+          </p>
+        </div>
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          rowClassName={(_, index) => (index % 2 === 0 ? 'bg-gray-50' : 'bg-white')}
+          scroll={{ x: 'max-content' }}
+        />
+        <CustomModal modal2Open={modal2Open} setModal2Open={setModal2Open} />
+      </div>
     </>
   )
 }

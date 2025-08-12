@@ -13,7 +13,7 @@ const StudentProfile = () => {
           heading={'Information'}
           btnText={''}
           wrapperHeight={'h-auto'}
-          sectionHeading={'詳細'}
+          sectionHeading={''}
           profileSection={false}
           sectionDivider={false}
           sectionExtra={false}
