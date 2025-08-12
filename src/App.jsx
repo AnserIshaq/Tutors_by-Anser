@@ -17,6 +17,7 @@ import PricingScreen from './Screens/PricingScreen'
 import CartScreen from './Screens/CartScreen'
 import TutorDashboardScreen from './Screens/Dashboard/TutorDashboardScreen'
 import StudentDashboardScreen from './Screens/Dashboard/StudentDashboard'
+import FindTutorScreen from './Screens/FindTutor/FindTutorScreen'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path='/cart' element={<CartScreen />} />
             <Route path='/tutor-dashboard' element={<TutorDashboardScreen />} />
             <Route path='/student-dashboard' element={<StudentDashboardScreen />} />
+            <Route path='/find-tutor' element={<FindTutorScreen />} />
           </Route>
 
           <Route path='/login' element={<LoginScreen />} />

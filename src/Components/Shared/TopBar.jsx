@@ -1,18 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { CustomButton } from '../ui/CustomButton'
-import CustomSelect from '../ui/CustomSelect'
 import DropDown from '../ui/DropDown'
-import CustomDrawer from '../ui/CustomDrawer'
+import CustomDrawer from '../ui/Drawer/CustomDrawer'
 import { topBarItems } from '../../Static/DropDownItems'
+import DrawerModes from '../ui/Drawer/DrawerModes'
+
 const TopBar = () => {
   const [open, setOpen] = useState(false)
   const showDrawer = () => {
     setOpen(true)
   }
 
-  const onClose = () => {
-    setOpen(false)
-  }
   const handleDropdownClick = (e) => {
     console.log('Dropdown item clicked:', e)
   }
@@ -20,7 +18,19 @@ const TopBar = () => {
   return (
     <div className='w-full contain px-[24px] md:px-[60px]'>
       <div className='flex items-center h-[86px] mx-auto flex-row justify-between'>
-        <CustomDrawer onCloseDrawer={onClose} openState={open} />
+        <CustomDrawer
+          onCloseDrawer={() => setOpen(false)}
+          openState={open}
+          mode='topbar'
+          modeComponents={DrawerModes}
+          extraHeaderContent={
+            <>
+              <img src='/cross.svg' alt='close' onClick={() => setOpen(false)} />
+              <img src='/logo.svg' alt='logo' />
+              <DropDown items={topBarItems} />
+            </>
+          }
+        />
         <div className='block lg:hidden'>
           <img src='/Burger.svg' alt='logo' className='cursor-pointer' onClick={showDrawer} />
         </div>
