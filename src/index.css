@@ -230,7 +230,7 @@ p {
 /* ANT design tab override */
 /* Main Segmented container */
 :where(.css-dev-only-do-not-override-7t2xvq).ant-segmented {
-  @apply h-[68px] w-[300px] md:w-[482px] p-[10px] rounded-[100px] bg-[#5183F4] flex items-center transition-all duration-300;
+  @apply h-[68px] w-auto sm:w-[482px] p-[10px] rounded-[100px] bg-[#5183F4] flex items-center transition-all duration-300;
 }
 
 :where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-group {
@@ -246,7 +246,7 @@ p {
 }
 
 :where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item-selected {
-  @apply md:w-[219px];
+  /* @apply md:w-[245px]; */
 }
 :where(.css-dev-only-do-not-override-7t2xvq).ant-segmented .ant-segmented-item::after {
   @apply rounded-[100px];
@@ -257,4 +257,37 @@ p {
 :where(.css-dev-only-do-not-override-7t2xvq).ant-segmented
   .ant-segmented-item:hover:not(.ant-segmented-item-selected):not(.ant-segmented-item-disabled) {
   @apply text-white;
+}
+
+
+/* ANT Design table override */
+:where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper{
+  @apply w-full
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper .ant-table-thead >tr>td{
+@apply bg-transparent! border-t! border-b! border-gray-300! rounded-none! mb-[10px]! font-normal text-[22px]! text-[#B1B1B1] [font-family:var(--font-league)]
+}
+:where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before, :where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper .ant-table-thead >tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
+  @apply hidden
+}
+
+:where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper .ant-table-tbody >tr >th, :where(.css-dev-only-do-not-override-7t2xvq).ant-table-wrapper .ant-table-tbody >tr >td{
+  @apply text-xl! font-normal text-[#B1B1B1] [font-family:var(--font-league)]
+}
+
+
+/* ANT Design MODAL */
+:where(.css-dev-only-do-not-override-7t2xvq).ant-modal .ant-modal-content{
+  @apply p-[24px]! rounded-[30px]
+}
+/* Target only our custom rating */
+.custom-star-rate .ant-rate-star {
+  padding: 2px;
+}
+
+.custom-star-rate .ant-rate-star-first,
+.custom-star-rate .ant-rate-star-second {
+  color: white !important; /* Fill */
+  -webkit-text-stroke: 2px #FFCC4A; /* Outline */
+  text-stroke: 2px #FFCC4A; /* For supported browsers */
 }

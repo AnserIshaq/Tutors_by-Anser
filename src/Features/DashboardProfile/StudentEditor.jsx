@@ -1,5 +1,5 @@
 import DashboardProfileCard from '../../Components/Shared/DashboardProfileCard'
-import {ProfileCardEditor2, StudentCardData_INFO } from '../../Static/DashboardProfileCardData'
+import { ProfileCardEditor2, StudentCardData_INFO } from '../../Static/DashboardProfileCardData'
 
 const StudentEditor = () => {
   return (
@@ -9,12 +9,12 @@ const StudentEditor = () => {
           <DashboardProfileCard
             heading={'Account Information'}
             btnText={'Edit'}
-            wrapperHeight={'h-auto lg:h-[80%]'}
+            wrapperHeight={'h-auto'}
             sectionHeading={'Details'}
             profileSection={false}
             sectionDivider={false}
             sectionExtra={false}
-            cardMainClass={'w-full lg:w-[50%]'}
+            cardMainClass={'w-full lg:w-[50%] h-full'}
             sectionWidth={'w-full'}
             data={ProfileCardEditor2}
             cardContentClass={'xl:min-w-[100px] sm:whitespace-nowrap'}
@@ -22,12 +22,12 @@ const StudentEditor = () => {
           <DashboardProfileCard
             heading={'User Information'}
             btnText={'Edit'}
-            wrapperHeight={'h-auto lg:h-[80%]'}
+            wrapperHeight={'h-auto'}
             sectionHeading={'Details'}
             profileSection={false}
             sectionDivider={false}
             sectionExtra={false}
-            cardMainClass={'w-full lg:w-[50%]'}
+            cardMainClass={'w-full lg:w-[50%] h-full'}
             sectionWidth={'w-full'}
             data={StudentCardData_INFO}
             cardContentClass={'xl:min-w-[200px] sm:whitespace-nowrap'}

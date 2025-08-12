@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import CustomTab from '../../Components/ui/CustomTab'
-import TutorProfile from '../../Features/DashboardProfile/TutorProfile'
-import TutorEditor from '../../Features/DashboardProfile/TutorEditor'
 import { studentTabsOptions } from '../../Static/TabOptions'
-import StudentProfile from '../../Features/DashboardProfile/StudentEditor'
+import StudentEditor from '../../Features/DashboardProfile/StudentEditor'
+import StudentProfile from '../../Features/DashboardProfile/StudentProfile'
 
 const StudentDashboardScreen = () => {
   const [activeTab, setActiveTab] = useState('Purchased History')
@@ -19,7 +18,7 @@ const StudentDashboardScreen = () => {
             onChange={setActiveTab}
           />
         </div>
-        {activeTab === 'Purchased History' ? <StudentProfile /> : <StudentProfile />}
+        {activeTab === 'Purchased History' ? <StudentProfile /> : <StudentEditor />}
       </div>
     </section>
   )

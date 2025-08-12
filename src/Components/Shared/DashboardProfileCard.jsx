@@ -3,6 +3,7 @@ import { CustomButton } from '../ui/CustomButton'
 import UploadProfile from './UploadProfile'
 import InfoRow from './InfoRow'
 import TimeSlotGrid from './TimeSlot'
+import CustomTable from '../ui/CustomTable'
 
 const DashboardProfileCard = ({
   heading,
@@ -17,12 +18,17 @@ const DashboardProfileCard = ({
   sectionWidth,
   data,
   cardContentClass,
+  tableSection = false,
+  infoRowSection = true,
+  mainButton = true,
 }) => {
   return (
     <div className={`bg-[#EBF5FE] rounded-[30px]  p-[15px] md:p-[24px] ${cardMainClass}`}>
       <div className='head flex justify-between pb-[24px]'>
         <h2>{heading}</h2>
-        <CustomButton text={btnText} className={'w-[100px]! h-[42px]! rounded-[50px] py-1.5 px-[30px]'} />
+        {mainButton && (
+          <CustomButton text={btnText} className={'w-[100px]! h-[42px]! rounded-[50px] py-1.5 px-[30px]'} />
+        )}
       </div>
       <div className={`flex gap-[24px] lg:flex-row flex-col ${wrapperHeight}`}>
         {profileSection && (
@@ -40,7 +46,8 @@ const DashboardProfileCard = ({
         <div className={`bg-white h-full ${sectionWidth} rounded-[20px] p-[24px] flex flex-col gap-[24px]`}>
           <p className='text-[#5183F4] text-[24px] font-semibold'>{sectionHeading}</p>
           <div className='flex flex-col lg:flex-row gap-[25px] xl:gap-[50px]'>
-            <InfoRow data={data} labelsClass={cardContentClass} />
+            {infoRowSection && <InfoRow data={data} labelsClass={cardContentClass} />}
+            {tableSection && <CustomTable className='w-full!' />}
             {sectionDivider && <div className='xl:h-[245px] border border-[#B1B1B1]'></div>}
             {sectionExtra && (
               <div>

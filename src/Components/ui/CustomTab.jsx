@@ -23,7 +23,7 @@ const CustomTab = ({ options, storageKey, defaultValue, onChange }) => {
     label: (
       <div className='flex items-center gap-2'>
         <img src={value === opt.value ? opt.activeIcon : opt.inactiveIcon} alt='' />
-        <span className='custom-tab-text'>{opt.label}</span>
+        <p className='custom-tab-text font-normal text-[18px]'>{opt.label}</p>
       </div>
     ),
   }))
