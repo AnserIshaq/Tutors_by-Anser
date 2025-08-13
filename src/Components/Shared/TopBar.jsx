@@ -4,9 +4,10 @@ import DropDown from '../ui/DropDown'
 import CustomDrawer from '../ui/Drawer/CustomDrawer'
 import { topBarItems } from '../../Static/DropDownItems'
 import DrawerModes from '../ui/Drawer/DrawerModes'
-
+import { useNavigate } from 'react-router'
 const TopBar = () => {
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
   const showDrawer = () => {
     setOpen(true)
   }
@@ -58,7 +59,7 @@ const TopBar = () => {
           <DropDown title={'Hironori Takeda'} items={topBarItems} onClick={handleDropdownClick} />
           <CustomButton
             text='日本語先生になる'
-            onClick={() => console.log('Log In clicked')}
+            onClick={() => navigate('/become-tutor')}
             className='lg:px-[15px] xl:px-[23px] py-[15px] h-[50px]! rounded-[50px] hidden lg:block text-base! font-medium!'
           />
         </div>

@@ -82,7 +82,7 @@ const BecomeTutorScreen = () => {
       </section>
       {/* end - Card Section */}
 
-      <Steps data={stepperData2} />
+      <Steps data={stepperData2} mode={'tutor'} />
       <Tour
         heading={'日本語の先生になって収入を増やしませんか'}
         headingClass={'text-center w-[80%]'}

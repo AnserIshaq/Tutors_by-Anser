@@ -1,7 +1,7 @@
 import React from 'react'
 import Stepper from './Stepper'
 
-const Steps = ({ data }) => {
+const Steps = ({ data, mode }) => {
   const ConditionalTitle = data.every((step) => !!step.desc)
   console.log(ConditionalTitle)
   return (
@@ -20,7 +20,7 @@ const Steps = ({ data }) => {
         </div>
         <div className='stepper-main relative'>
           {data.map((step, index) => (
-            <Stepper key={index} {...step} />
+            <Stepper key={index} {...step} mode={mode}/>
           ))}
         </div>
       </div>

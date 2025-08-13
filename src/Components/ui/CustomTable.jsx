@@ -80,7 +80,7 @@ const CustomTable = () => {
           <CustomButton
             text={'Leave a Review'}
             className={
-              'text-[#5183F4]! border border-[#5183F4]! bg-[#FFFFFF]! h-[50px]! w-max rounded-[50px]! py-[15px] px-[32px] font-normal! text-xl! '
+              'text-[#5183F4]! border border-[#5183F4]! bg-[#FFFFFF]! h-[50px]! w-max rounded-[50px]! py-[15px] px-[32px] font-normal! text-xl! flex items-center'
             }
             onClick={handleModal}
           />

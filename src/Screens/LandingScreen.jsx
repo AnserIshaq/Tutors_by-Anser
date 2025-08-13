@@ -144,7 +144,7 @@ const LandingScreen = () => {
       {/* END - Slider Section */}
 
       {/* START - Step Section */}
-      <Steps data={stepperData} />
+      <Steps data={stepperData} mode='landing' />
       {/* END - Step Section */}
 
       {/* START - Reasons Section */}

@@ -1,4 +1,4 @@
-const Stepper = ({ reverse = false, text, desc, img, step, mobStep, isFirst = false, isLast = false }) => {
+const Stepper = ({ reverse = false, text, desc, img, step, mobStep, isFirst = false, isLast = false, mode }) => {
   return (
     <>
       <div
@@ -14,7 +14,7 @@ const Stepper = ({ reverse = false, text, desc, img, step, mobStep, isFirst = fa
             reverse ? '2xl:justify-start' : '2xl:justify-end'
           }`}>
           <div
-            className={`max-w-100%  lg:max-w-[85%] text-xl xl:text-[26px] [font-family:var(--font-league)] font-normal md:font-medium ${
+            className={`max-w-100%  ${mode === 'landing' ? 'lg:max-w-[85%]':"lg:max-w-[75%]"} text-xl xl:text-[26px] [font-family:var(--font-league)] font-normal md:font-medium ${
               desc ? 'text-[#5183F4]' : 'text-[#000000]'
             } ${reverse ? 'order-3' : 'order-2'}`}>
             {text}
@@ -28,8 +28,8 @@ const Stepper = ({ reverse = false, text, desc, img, step, mobStep, isFirst = fa
           <div
             className={`w-[2px] bg-[#B1B1B1] flex items-center justify-center absolute z-1 ${
               isFirst
-                ? 'h-[350px] lg:h-[0px] xl:h-[380px]  xl:top-[45%]'
-                : 'bottom-[45%] h-[300px] md:h-[220px] lg:h-[300px] xl:h-[380px] '
+                ? `h-[350px] lg:h-[0px] xl:h-[380px]  xl:top-[45%]`
+                : `bottom-[45%] h-[300px] md:h-[220px] lg:h-[300px] ${mode === 'landing' ? 'lg:h-[300px] xl:h-[380px]' : 'h-[300px] md:h-[330px] lg:h-[320px] xl:h-[360px]'}`
             }`}></div>
           <div className='steps bg-[#EBF5FE] rounded-[100px] py-[8px] px-[12px] h-[40px] w-[70px] text-base font-normal whitespace-nowrap z-2 hidden md:block text-[#181A20]'>
             {step}
