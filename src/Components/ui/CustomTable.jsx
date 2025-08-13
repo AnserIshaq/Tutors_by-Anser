@@ -75,7 +75,7 @@ const CustomTable = () => {
       key: 'review',
       width: 180,
 
-      render: (_, record) => (
+      render: () => (
         <Space size='middle'>
           <CustomButton
             text={'Leave a Review'}
